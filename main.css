@@ -454,17 +454,17 @@ footer a:hover {
     }
     
     h2 {
-        font-size: 2.5em;
+        font-size: 1.9em;
         width: 90%;   
     }
     
     h3 {
-        font-size: 1.7em;
+        font-size: 1.3em;
         line-height: 1;
     }
     
     #column p {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
  
     
@@ -525,7 +525,7 @@ footer a:hover {
         float: none;
         width: 95%;
         margin:auto;
-        margin-top: 270px;
+        margin-top: 300px;
         padding:0;
         margin-bottom: 80px;
         min-width: 360px;
