@@ -6,6 +6,8 @@ body {
     margin: 0;
     background: #fafafa;
 	font: 14px/1.2 'Playfair Display', serif;
+    font-weight: normal;
+    text-shadow: 0 0 0;
 }
 
 
@@ -116,6 +118,8 @@ h1 a{
     margin: 0;
     padding: 0px;
     transition-duration: 0.2s;
+    font-weight: normal;
+    text-shadow: 0 0 0;
 }
 
 h1 a:hover {
@@ -131,6 +135,8 @@ h2 {
     padding: 0px;
     padding-bottom: 20px;
     width: 300px;
+    font-weight: normal;
+    text-shadow: 0 0 0;
 }
 
 #images {
@@ -166,6 +172,8 @@ h3 {
     font-size: 1.5em;
     color: #919191;
     transition-duration: 0.4s;
+    font-weight: normal;
+    text-shadow: 0 0 0;
 }
 
 h4 {
@@ -176,6 +184,8 @@ h4 {
     color: #424242;
     line-height: 0.1;
     white-space: pre-wrap;
+    font-weight: normal;
+    text-shadow: 0 0 0;
 }
 
 #bio {
