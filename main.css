@@ -259,6 +259,14 @@ footer a:hover {
     text-decoration: underline;
 }
 
+#left-foot a:visited {
+    color: #424242;
+}
+
+#left-foot a:hover {
+    color: #919191;
+}
+
 #right-foot {
     margin-left: 62%;
 }
