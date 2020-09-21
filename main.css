@@ -398,6 +398,10 @@ footer a:hover {
         bottom: 0;
         background-color: #fafafa;
         font-size: 0.5em;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        
     }
     
     #rightfoot {
@@ -552,6 +556,9 @@ footer a:hover {
    
     footer {
         font-size: 0.5em;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
     }
 
 }
