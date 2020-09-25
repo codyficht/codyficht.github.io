@@ -55,14 +55,14 @@ nav li:last-child{
 
 nav a {
     font-family: 'Montserrat', sans-serif;
-	color: #919191;
+	color: #878787;
 	text-decoration: none;
     font-size: 1em;
     transition-duration: 0.1s;
 }
 
 nav a:hover {
-    color: #424242;
+    color: #404040;
 }
 
 section nav {
@@ -91,14 +91,14 @@ section nav li:last-child{
 
 section nav a {
     font-family: 'Montserrat', sans-serif;
-	color: #919191;
+	color: #878787;
 	text-decoration: none;
     font-size: 1em;
     transition-duration: 0.1s;
 }
 
 section nav a:hover {
-    color: #424242;
+    color: #404040;
 }
 
 #menu {
@@ -170,17 +170,17 @@ h2 {
 }
 
 #images img:hover + h3 {
-    color: #424242;
+    color: #404040;
 }
 
 #column p {
     font-family: 'Montserrat', sans-serif;
-    color: #636363;
+    color: #696969;
 }
 
 h3 {
     font-size: 1.5em;
-    color: #919191;
+    color: #858585;
     transition-duration: 0.4s;
     font-weight: normal;
     text-shadow: 0 0 0;
@@ -191,7 +191,7 @@ h4 {
     margin:0;
     padding: 0;
     font-size: 1.1em;
-    color: #424242;
+    color: #404040;
     line-height: 0.1;
     white-space: pre-wrap;
     font-weight: normal;
@@ -206,7 +206,7 @@ h4 {
 #bio p {
     white-space:pre-wrap;
     font-family: 'Montserrat', sans-serif;
-    color: #636363;
+    color: #696969;
     margin:0;
     padding-top: 0;
     padding-bottom: 20px;
@@ -444,7 +444,7 @@ footer a:hover {
     
     h1 {
         font-size: 2.5em;
-        background-color: #f5f5f5;
+        background-color: #f0f0f0;
         padding:0;
         margin:0;
         padding-bottom: 20px;
@@ -496,7 +496,7 @@ footer a:hover {
         margin:0;
         padding: 0;
         position: relative;
-        background-color: #f5f5f5;
+        background-color: #f0f0f0;
         padding-top: 10px;
     }
     
