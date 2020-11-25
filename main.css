@@ -11,7 +11,7 @@ header, nav, section, footer, main {
 body {
     margin: 0;
     background: #fafafa;
-	font: 14px/1.2 'Playfair Display', serif;
+	font: 14px/1.3 'Playfair Display', serif;
     font-weight: normal;
     text-shadow: 0 0 0;
     -webkit-text-size-adjust: 100%;
@@ -175,6 +175,7 @@ h2 {
 
 #column p {
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
     color: #414141;
 }
 
@@ -206,6 +207,7 @@ h4 {
 #bio p {
     white-space:pre-wrap;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
     color: #414141;
     margin:0;
     padding-top: 0;
@@ -217,6 +219,10 @@ h4 {
     color: #a33376;
 }
 
+#bio h4 {
+    color: #353535;
+    font-weight: bold;
+}
 #images h2 {
     padding-bottom: 20px;
 }
@@ -315,6 +321,10 @@ footer a:hover {
         padding-bottom: 20px;
         padding-top: 20px;
     }
+    
+    h2 {
+        padding-top: 20px
+    }
 
     #menu {
         margin:0;
@@ -336,7 +346,6 @@ footer a:hover {
     
     #bio p {
         font-size: 0.9em;
-        line-height: 1.3;
     }
     
     nav {
