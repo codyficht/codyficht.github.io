@@ -302,9 +302,11 @@ footer a:hover {
 }
 
 #progressBar {
-    width: 100%;
+    width: 60%;
+    margin: auto;
     background-color: #fafafa;
     border-radius: 2px;
+    border: solid .5px #cccccc;
 }
 
 #bar {
