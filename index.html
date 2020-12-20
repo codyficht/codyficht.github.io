@@ -82,35 +82,32 @@
         
         //Function to select next image in array
         function handler() {
-            
             document.getElementById("homeSlideShow").src = imgArr[num];
-            num = (num + 1) % 7;
-            
-    }
-            
-                        var i = 0;
-    function move() {
-        if(i == 0)
+            num = (num + 1) % 7;  
+        }
+    
+        //Control progress bar
+        var i = 0;
+        function move() {
+            if(i == 0)
             {
                 i = 1;
             }
-        var element = document.getElementById("bar");
-        var width = 1;
-        var id = setInterval(frame, 60);
-        function frame() {
-            if (width >= 100)
+            var element = document.getElementById("bar");
+            var width = 1;
+            var id = setInterval(frame, 65);
+            function frame() {
+                if (width >= 100)
                 {
                     clearInterval(id);
                     i = 0;
                 }
-            else
+                else
                 {
-                    width++;
-                    element.style.width = width + "%";
+                     width++;
+                     element.style.width = width + "%";
                 }
-        }
-            
-            
+            } 
         }
         
         //Call function first to correct timing issue
@@ -122,18 +119,15 @@
             handler();
             move();
         }, 7000);
-        
     }
     
-    
-         
 </script>
     
     
 </head>
     
 <div id="wrap">    
-<body onload="imageRotate(); move();">
+<body onload="imageRotate()">
     <div id="menu">
         
         <header>
