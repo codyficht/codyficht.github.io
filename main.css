@@ -301,6 +301,19 @@ footer a:hover {
     color: #424242;
 }
 
+#progressBar {
+    width: 100%;
+    background-color: #fafafa;
+    border-radius: 2px;
+}
+
+#bar {
+    width: 1%;
+    height: 3px;
+    background-color: #dedede;
+    border-radius: 3px;
+    transition-duration: .5s;
+}
 
 @media screen and (max-width:1100px){
     

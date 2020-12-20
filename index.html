@@ -85,16 +85,47 @@
             
             document.getElementById("homeSlideShow").src = imgArr[num];
             num = (num + 1) % 7;
+            
+    }
+            
+                        var i = 0;
+    function move() {
+        if(i == 0)
+            {
+                i = 1;
+            }
+        var element = document.getElementById("bar");
+        var width = 1;
+        var id = setInterval(frame, 60);
+        function frame() {
+            if (width >= 100)
+                {
+                    clearInterval(id);
+                    i = 0;
+                }
+            else
+                {
+                    width++;
+                    element.style.width = width + "%";
+                }
+        }
+            
+            
         }
         
         //Call function first to correct timing issue
         handler();
+        move();
         
         //Time rotation of images
         setInterval(function() {
             handler();
+            move();
         }, 7000);
+        
     }
+    
+    
          
 </script>
     
@@ -102,7 +133,7 @@
 </head>
     
 <div id="wrap">    
-<body onload="imageRotate()">
+<body onload="imageRotate(); move();">
     <div id="menu">
         
         <header>
@@ -127,8 +158,12 @@
             <section>
                 <img src="" id="homeSlideShow" alt="evelyn artwork"/>
                 <p></p>
+                <div id="progressBar">
+            <div id="bar"></div>
+        </div>
             </section>
         </div>
+        
     </main>
    
    
