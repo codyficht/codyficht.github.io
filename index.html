@@ -87,7 +87,7 @@
         }
     
         //Control progress bar
-        var i = 0;
+        /*var i = 0;
         function move() {
             if(i == 0)
             {
@@ -108,16 +108,16 @@
                      element.style.width = width + "%";
                 }
             } 
-        }
+        }*/
         
         //Call function first to correct timing issue
         handler();
-        move();
+        //move();
         
         //Time rotation of images
         setInterval(function() {
             handler();
-            move();
+            //move();
         }, 7000);
     }
     
@@ -152,9 +152,9 @@
             <section>
                 <img src="" id="homeSlideShow" alt="evelyn artwork"/>
                 <p></p>
-                <div id="progressBar">
+              <!--  <div id="progressBar">
             <div id="bar"></div>
-        </div>
+        </div> -->
             </section>
         </div>
         
