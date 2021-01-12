@@ -339,6 +339,7 @@ footer a:hover {
     padding-top: 0px;
     margin: 0px;
     
+    
 }
 
 #innermenu nav {
@@ -346,6 +347,7 @@ footer a:hover {
     margin: 0px;
     padding-left: 15px;
     border: none;
+    
         
 }
 
@@ -357,6 +359,7 @@ footer a:hover {
     border: none;
     padding-top: 0;
     margin-top: 0;
+    transition-duration: 2s;
 }
 
 #innermenu nav {
