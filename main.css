@@ -305,16 +305,15 @@ footer a:hover {
     width: 60%;
     margin: auto;
     background-color: #fafafa;
-    border-radius: 2px;
-    border: solid .5px #cccccc;
+    border-radius: 1px;
 }
 
 #bar {
     width: 1%;
     height: 3px;
-    background-color: #dedede;
-    border-radius: 3px;
-    transition-duration: .15s;
+    background-color: #ebebeb;
+    border-radius: 1px;
+    transition-duration: .02s;
 }
 
 @media screen and (max-width:1100px){

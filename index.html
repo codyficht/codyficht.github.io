@@ -68,7 +68,7 @@
         
         var num = 0;
         var imgArr = new Array();
-        
+        var linkArr = new Array();
         
         imgArr[0] = 'images/Homepage/09installfromfront_landscape.jpg';
         imgArr[1] = 'images/Homepage/crisscross copy.jpg';
@@ -78,10 +78,21 @@
         imgArr[5] = 'images/Homepage/SkinsAndSurfaces_ESR copy.jpg';
         imgArr[6] = 'images/Homepage/Touchline_12_17_ESR.jpg';
         
-        document.getElementById("homeSlideShow").src = imgArr[num];
+        linkArr[0] = "installations.html";
+        linkArr[1] = "abstractreliefs.html";
+        linkArr[2] = "abstractreliefs.html";
+        linkArr[3] = "abstractreliefs.html";
+        linkArr[4] = "installation.html";
+        linkArr[5] = "abstractreliefs.html";
+        linkArr[6] = "touchline.html";
+        
+        
+        document.getElementById("links").src = imgArr[num];
+        document.getElementById("homeSlideShow").href = "works.html";
         
         //Function to select next image in array
         function handler() {
+            document.getElementById("links").href = linkArr[num];
             document.getElementById("homeSlideShow").src = imgArr[num];
             num = (num + 1) % 7;  
         }
@@ -95,7 +106,7 @@
             }
             var element = document.getElementById("bar");
             var width = 0;
-            var id = setInterval(frame, 60);
+            var id = setInterval(frame, 65);
             function frame() {
                 if (width >= 100)
                 {
@@ -150,9 +161,11 @@
     <main>
         <div id="images">
             <section>
+                <a id="links" href="">
                 <img src="" id="homeSlideShow" alt="evelyn artwork"/>
+                </a>
                 <p></p>
-              <!--  <div id="progressBar">
+                <!-- <div id="progressBar">
             <div id="bar"></div>
         </div> -->
             </section>
