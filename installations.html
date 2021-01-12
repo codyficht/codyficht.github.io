@@ -43,7 +43,25 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+<script language="JavaScript" type="text/JavaScript">
+    	
+    function dropdown() {
+        var x = document.getElementById("innermenu");
+        var y = document.getElementById("dropbut");
+        if (x.style.display === "none")
+            {
+                x.style.display = "block";
+                y.style = "color:#202020";
+            }
+        else
+            {
+                x.style.display = "none";
+                y.style = "color: #616161";
+            }
+    }
     
+</script>
     
 </head>
     
@@ -57,7 +75,20 @@
         
         <nav>
             <ul>
-                <li><a href="works.html" style=color:#222222>Works</a></li>
+                <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
+                <li id="temp">
+                <div id="innermenu" style="display:none">
+                <nav>
+                    <ul>
+                        <li><a href="installations.html" style=color:#222222>Installations</a></li>
+                        <li><a href="touchline.html">Touchline</a></li>
+                        <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
+                        <li><a href="processdrawings.html">Process Drawings</a></li>
+                        <li><a href="paintings.html">Paintings</a></li>
+                    </ul>
+                </nav>
+                </div>
+                </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="mailto:eviersr@gmail.com">Contact</a></li>

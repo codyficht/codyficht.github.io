@@ -43,8 +43,28 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-</head>
     
+<script language="JavaScript" type="text/JavaScript">
+    	
+    function dropdown() {
+        var x = document.getElementById("innermenu");
+        var y = document.getElementById("dropbut");
+        if (x.style.display === "none")
+            {
+                x.style.display = "block";
+                
+            }
+        else
+            {
+                x.style.display = "none";
+                
+            }
+    }
+    
+</script>
+    
+</head>
+
 <div id="wrap">    
 <body>
     <div id="menu">
@@ -52,10 +72,22 @@
         <header>
             <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
         </header>
-        
         <nav>
             <ul>
-                <li><a href="works.html" style=color:#222222>Works</a></li>
+                <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
+                <li id="temp">
+                <div id="innermenu" style="display:none">
+                <nav>
+                    <ul>
+                        <li><a href="installations.html">Installations</a></li>
+                        <li><a href="touchline.html" style=color:#222222>Touchline</a></li>
+                        <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
+                        <li><a href="processdrawings.html">Process Drawings</a></li>
+                        <li><a href="paintings.html">Paintings</a></li>
+                    </ul>
+                </nav>
+                </div>
+                </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="mailto:eviersr@gmail.com">Contact</a></li>

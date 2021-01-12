@@ -53,10 +53,7 @@
 <meta name="twitter:description" content="Evelyn Sorochan-Ruland is an interdisciplinary artist living and working in London, Ontario.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/codyficht/codyficht.github.io/master/images/portrait/IMG_0545.jpg">
 <meta name="twitter:card" content="summary_large_image">
-    
-
-    
-    
+      
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -64,6 +61,21 @@
     
 <script language="JavaScript" type="text/JavaScript">
     	
+    function dropdown() {
+        var x = document.getElementById("innermenu");
+        var y = document.getElementById("dropbut");
+        if (x.style.display === "none")
+            {
+                x.style.display = "block";
+                y.style = "color:#202020";
+            }
+        else
+            {
+                x.style.display = "none";
+                y.style = "color: #616161";
+            }
+    }
+    
     function imageRotate() {
         
         var num = 0;
@@ -82,7 +94,7 @@
         linkArr[1] = "abstractreliefs.html";
         linkArr[2] = "abstractreliefs.html";
         linkArr[3] = "abstractreliefs.html";
-        linkArr[4] = "installation.html";
+        linkArr[4] = "installations.html";
         linkArr[5] = "abstractreliefs.html";
         linkArr[6] = "touchline.html";
         
@@ -147,7 +159,20 @@
         
         <nav>
             <ul>
-                <li><a href="works.html">Works</a></li>
+                <li id="droptitle"><a href="#/" id="dropbut" onclick="dropdown()">Works</a></li>
+                <li id="temp">
+                <div id="innermenu" style="display:none">
+                <nav>
+                    <ul>
+                        <li><a href="installations.html">Installations</a></li>
+                        <li><a href="touchline.html">Touchline</a></li>
+                        <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
+                        <li><a href="processdrawings.html">Process Drawings</a></li>
+                        <li><a href="paintings.html">Paintings</a></li>
+                    </ul>
+                </nav>
+                </div>
+                </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
