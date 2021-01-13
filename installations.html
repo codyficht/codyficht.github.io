@@ -1,51 +1,79 @@
 <!doctype html>
 <html>
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-T53KKNL53F');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<title>Installations</title>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-<meta name="description" content="View installations created by visual artist Evelyn Sorochan-Ruland.">
-    
-<link href="main.css" rel="stylesheet">
+        gtag('config', 'G-T53KKNL53F');
 
-    	<!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-	<link rel="apple-touch-icon" href="/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="/favicon-144.png">
-	<meta name="msapplication-config" content="/browserconfig.xml">
-	<!-- ****** faviconit.com favicons ****** -->
-<!--[if lt IE 9]>
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>Installations</title>
+
+    <meta name="description" content="View installations created by visual artist Evelyn Sorochan-Ruland.">
+
+    <link href="main.css" rel="stylesheet">
+
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+    <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script language="JavaScript" type="text/JavaScript">
-    	
+    <script language="JavaScript" type="text/JavaScript">
+
+        function setupstor()
+    {
+        var x = document.getElementById("innermenu");
+        var s = "false";
+        try{
+            s = sessionStorage.getItem("down");
+        }
+        catch(err)
+            {
+                //Not there
+            }
+        
+        if(s === "true")
+            {
+                x.className = "active";
+            }
+        else
+            {
+                setTimeout(dropdown, 500);
+            }
+        window.sessionStorage.setItem("down", true);
+    }
+    
     function dropdown() {
         var x = document.getElementById("innermenu");
         var y = document.getElementById("dropbut");
@@ -56,6 +84,7 @@
                 z.className = "active";
                 y.style = "color:#202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", true);
             }
         else
             {
@@ -63,153 +92,157 @@
                 z.className = "";
                 y.style = "color: #202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", false);
             }
     }
     
 </script>
-    
-</head>
-    
-<div id="wrap">    
-<body>
-    <div id="menu">
-        
-        <header>
-            <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
-                <li id="temp">
-                <div id="innermenu" class="active">
-                <nav>
-                    <ul>
-                        <li><a href="installations.html" style=color:#202020>Installations</a></li>
-                        <li><a href="touchline.html">Touchline</a></li>
-                        <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
-                        <li><a href="processdrawings.html">Process Drawings</a></li>
-                        <li><a href="paintings.html">Paintings</a></li>
-                    </ul>
-                </nav>
-                </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
-                <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
-            </ul>
-        </nav>
-        
-        
 
-    </div>
-    
-    <main>
-        <div id="images" class="active">
-            <h2>Works: Installations</h2>
-            <div id="column">
-                <img src="images/installations/ATHFRONT_FULL_2.jpg">
-                <h3>Above the Horizontal</h3>
-                <p>Mixed media, dimensions may vary, 2018.</p>
-                <img src="images/installations/ATH_back_great5.jpg">
-                <h3>Above the Horizontal</h3>
-                <p>Mixed media, dimensions may vary, 2018.</p>
-                <img src="images/installations/ATH_back_install1dng.jpg">
-                <h3>Industrial Skins</h3>
-                <p>Left: Touchline (3), mixed media, 2018.<br>Centre: Above the Horizontal, mixed media, 2018.<br>Right: Back (Right Wing), mixed media, 2018.</p>
-                <img src="images/installations/OC_side_great8.jpg">
-                <h3>Back (Right Wing)</h3>
-                <p>Mixed media, 2018.</p>
-                <img src="images/installations/OC_side_from_closeup_great13.jpg">
-                <h3>Back (Right Wing)</h3>
-                <p>Mixed media, 2018.</p>
-                <img src="images/installations/floorbackIS%202.jpg">
-                <h3>Back (Right Wing)</h3>
-                <p>Detail, mixed media, 2018.</p>
-                <img src="images/installations/10install_scumtoATH1_.jpg">
-                <h3>Industrial Skins</h3>
-                <p>Installation shot, mixed media, 2018.</p>
-                <img src="images/installations/backs_install1ok.jpg">
-                <h3>Backs</h3>
-                <p>Left: Back (Inside Centre), mixed media, 2018.<br>Centre: Back (Outside Centre), mixed media, 2017.<br>Right: Back (Fly Half), mixed media, 2017.</p>
-                <img src="images/installations/Fly_install_side_good1.jpg">
-                <h3>Back (Fly Half)</h3>
-                <p>Mixed media, 2017.</p>
-                <img src="images/installations/09installfromfront_landscape.jpg">
-                <h3>Industrial Skins</h3>
-                <p>Detail, Above the Horizontal, mixed media, 2017.</p>
-                <img src="images/installations/08rightwingbackcloseup_.jpg">
-                <h3>Back (Inside Centre)</h3>
-                <p>Detail, mixed media, 2018.</p>
-                <img src="images/installations/rightwing_bottomgood1.jpg">
-                <h3>Back (Inside Centre)</h3>
-                <p>Mixed media, dimensions may vary, 2017.</p>
-                <img src="images/installations/installfromfront_portraitgood6.jpg">
-                <h3>Industrial Skins</h3>
-                <p>Installation shot, mixed media, 2018.</p>
-                <img src="images/installations/IMG_4754.jpg">
-                <h3>Back (Outside Centre)</h3>
-                <p>Detail, mixed media, 2017.</p>
-                <img src="images/installations/side_IC_great3.jpg">
-                <h3>Back (Outside Centre)</h3>
-                <p>Mixed media, 2017.</p>
-                <img src="images/installations/sinbin_wing_ATH_installGOOD1.jpg">
-                <h3>Industrial Skins</h3>
-                <p>Installation Shot<br>Left: Back (Right Wing), mixed media, 2018.<br>Centre: Above the Horizontal (detail), mixed media, 2018.<br>Right: Sin Bin, mixed media, 2018.</p>
-                <img src="images/installations/sinbin_strap_amazing6.jpg">
-                <h3>Sin Bin</h3>
-                <p>Mixed media, 2018.</p>
-                <img src="images/installations/sinbin_closeup_great4.jpg">
-                <h3>Sin Bin</h3>
-                <p>Detail, mixed media, 2018.</p>
-                <img src="images/installations/scrum_landscape_5good.jpg">
-                <h3>Scrum</h3>
-                <p>Mixed media, 2018.</p>
-                <img src="images/installations/Scrum_ESR.jpg">
-                <h3>Scrum</h3>
-                <p>Mixed media, 2018</p>
-                <img src="images/installations/02Back(RightWing)_ESR.jpg">
-                <h3>Back (Right Wing)</h3>
-                <p>Side view, mixed media, 2018.</p>
-                <img src="images/installations/03Back(RightWing)_ESR.jpg">
-                <h3>Back (Right Wing)</h3>
-                <p>Detail, mixed media, 2018.</p>
-                <img src="images/installations/ABT_instalC2%20copy.jpg">
-                <h3></h3>
-                <p>Installation shot, mixed media, 2017.</p>
-                <img src="images/installations/strikeinstallwhite2.jpg">
-                <h3>Strike</h3>
-                <p>Mixed media, 9ft x 4ft, 2017.</p>
-                <img src="images/installations/strikeblackfront.jpg">
-                <h3>Strike</h3>
-                <p>Mixed media, 9ft x 4ft, 2017.</p>
-                <img src="images/installations/ruckfrontgood.jpg">
-                <h3>Ruck</h3>
-                <p>Detail, mixed media, 5ft x 5ft, 2017</p>
-                <img src="images/installations/rucksideview.jpg">
-                <h3>Ruck</h3>
-                <p>Mixed media, 5ft x 5ft, 2017.</p>
-                <img src="images/installations/ruckfrontgood.jpg">
-                <h3>Ruck</h3>
-                <p>Mixed media, 5ft x 5ft, 2017.</p>
-            
-            
-            
-            </div>
-            
+</head>
+
+<div id="wrap">
+
+    <body>
+        <div id="menu">
+
+            <header>
+                <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
+                    <li id="temp">
+                        <div id="innermenu">
+                            <nav>
+                                <ul>
+                                    <li><a href="installations.html" style=color:#202020>Installations</a></li>
+                                    <li><a href="touchline.html">Touchline</a></li>
+                                    <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
+                                    <li><a href="processdrawings.html">Process Drawings</a></li>
+                                    <li><a href="paintings.html">Paintings</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script language="JavaScript" type="text/JavaScript">setupstor();</script>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
+                    <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+
+
+
         </div>
-        
-    </main>
-   
-    <footer>
-        <p id="left-foot">
-           &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> 
-        </p>
-            
-      	<p id="rightfoot"><a href="#images">Back to top</a></p>
-    </footer>
-              
-</body>
+
+        <main>
+            <div id="images" class="active">
+                <h2>Works: Installations</h2>
+                <div id="column">
+                    <img src="images/installations/ATHFRONT_FULL_2.jpg">
+                    <h3>Above the Horizontal</h3>
+                    <p>Mixed media, dimensions may vary, 2018.</p>
+                    <img src="images/installations/ATH_back_great5.jpg">
+                    <h3>Above the Horizontal</h3>
+                    <p>Mixed media, dimensions may vary, 2018.</p>
+                    <img src="images/installations/ATH_back_install1dng.jpg">
+                    <h3>Industrial Skins</h3>
+                    <p>Left: Touchline (3), mixed media, 2018.<br>Centre: Above the Horizontal, mixed media, 2018.<br>Right: Back (Right Wing), mixed media, 2018.</p>
+                    <img src="images/installations/OC_side_great8.jpg">
+                    <h3>Back (Right Wing)</h3>
+                    <p>Mixed media, 2018.</p>
+                    <img src="images/installations/OC_side_from_closeup_great13.jpg">
+                    <h3>Back (Right Wing)</h3>
+                    <p>Mixed media, 2018.</p>
+                    <img src="images/installations/floorbackIS%202.jpg">
+                    <h3>Back (Right Wing)</h3>
+                    <p>Detail, mixed media, 2018.</p>
+                    <img src="images/installations/10install_scumtoATH1_.jpg">
+                    <h3>Industrial Skins</h3>
+                    <p>Installation shot, mixed media, 2018.</p>
+                    <img src="images/installations/backs_install1ok.jpg">
+                    <h3>Backs</h3>
+                    <p>Left: Back (Inside Centre), mixed media, 2018.<br>Centre: Back (Outside Centre), mixed media, 2017.<br>Right: Back (Fly Half), mixed media, 2017.</p>
+                    <img src="images/installations/Fly_install_side_good1.jpg">
+                    <h3>Back (Fly Half)</h3>
+                    <p>Mixed media, 2017.</p>
+                    <img src="images/installations/09installfromfront_landscape.jpg">
+                    <h3>Industrial Skins</h3>
+                    <p>Detail, Above the Horizontal, mixed media, 2017.</p>
+                    <img src="images/installations/08rightwingbackcloseup_.jpg">
+                    <h3>Back (Inside Centre)</h3>
+                    <p>Detail, mixed media, 2018.</p>
+                    <img src="images/installations/rightwing_bottomgood1.jpg">
+                    <h3>Back (Inside Centre)</h3>
+                    <p>Mixed media, dimensions may vary, 2017.</p>
+                    <img src="images/installations/installfromfront_portraitgood6.jpg">
+                    <h3>Industrial Skins</h3>
+                    <p>Installation shot, mixed media, 2018.</p>
+                    <img src="images/installations/IMG_4754.jpg">
+                    <h3>Back (Outside Centre)</h3>
+                    <p>Detail, mixed media, 2017.</p>
+                    <img src="images/installations/side_IC_great3.jpg">
+                    <h3>Back (Outside Centre)</h3>
+                    <p>Mixed media, 2017.</p>
+                    <img src="images/installations/sinbin_wing_ATH_installGOOD1.jpg">
+                    <h3>Industrial Skins</h3>
+                    <p>Installation Shot<br>Left: Back (Right Wing), mixed media, 2018.<br>Centre: Above the Horizontal (detail), mixed media, 2018.<br>Right: Sin Bin, mixed media, 2018.</p>
+                    <img src="images/installations/sinbin_strap_amazing6.jpg">
+                    <h3>Sin Bin</h3>
+                    <p>Mixed media, 2018.</p>
+                    <img src="images/installations/sinbin_closeup_great4.jpg">
+                    <h3>Sin Bin</h3>
+                    <p>Detail, mixed media, 2018.</p>
+                    <img src="images/installations/scrum_landscape_5good.jpg">
+                    <h3>Scrum</h3>
+                    <p>Mixed media, 2018.</p>
+                    <img src="images/installations/Scrum_ESR.jpg">
+                    <h3>Scrum</h3>
+                    <p>Mixed media, 2018</p>
+                    <img src="images/installations/02Back(RightWing)_ESR.jpg">
+                    <h3>Back (Right Wing)</h3>
+                    <p>Side view, mixed media, 2018.</p>
+                    <img src="images/installations/03Back(RightWing)_ESR.jpg">
+                    <h3>Back (Right Wing)</h3>
+                    <p>Detail, mixed media, 2018.</p>
+                    <img src="images/installations/ABT_instalC2%20copy.jpg">
+                    <h3></h3>
+                    <p>Installation shot, mixed media, 2017.</p>
+                    <img src="images/installations/strikeinstallwhite2.jpg">
+                    <h3>Strike</h3>
+                    <p>Mixed media, 9ft x 4ft, 2017.</p>
+                    <img src="images/installations/strikeblackfront.jpg">
+                    <h3>Strike</h3>
+                    <p>Mixed media, 9ft x 4ft, 2017.</p>
+                    <img src="images/installations/ruckfrontgood.jpg">
+                    <h3>Ruck</h3>
+                    <p>Detail, mixed media, 5ft x 5ft, 2017</p>
+                    <img src="images/installations/rucksideview.jpg">
+                    <h3>Ruck</h3>
+                    <p>Mixed media, 5ft x 5ft, 2017.</p>
+                    <img src="images/installations/ruckfrontgood.jpg">
+                    <h3>Ruck</h3>
+                    <p>Mixed media, 5ft x 5ft, 2017.</p>
+
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p id="left-foot">
+                &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
+            </p>
+
+            <p id="rightfoot"><a href="#images">Back to top</a></p>
+        </footer>
+
+    </body>
 </div>
+
 </html>

@@ -1,51 +1,80 @@
 <!doctype html>
 <html>
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-T53KKNL53F');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<title>Process Drawings</title>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-<meta name="description" content="View process drawings created by visual artist Evelyn Sorochan-Ruland.">
-    
-<link href="main.css" rel="stylesheet">
+        gtag('config', 'G-T53KKNL53F');
 
-    	<!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-	<link rel="apple-touch-icon" href="/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="/favicon-144.png">
-	<meta name="msapplication-config" content="/browserconfig.xml">
-	<!-- ****** faviconit.com favicons ****** -->
-<!--[if lt IE 9]>
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>Process Drawings</title>
+
+    <meta name="description" content="View process drawings created by visual artist Evelyn Sorochan-Ruland.">
+
+    <link href="main.css" rel="stylesheet">
+
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+    <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-    
- <script language="JavaScript" type="text/JavaScript">
-    	
+
+    <script language="JavaScript" type="text/JavaScript">
+
+
+        function setupstor()
+    {
+        var x = document.getElementById("innermenu");
+        var s = "false";
+        try{
+            s = sessionStorage.getItem("down");
+        }
+        catch(err)
+            {
+                //Not there
+            }
+        
+        if(s === "true")
+            {
+                x.className = "active";
+            }
+        else
+            {
+                setTimeout(dropdown, 500);
+            }
+        window.sessionStorage.setItem("down", true);
+    }
+     
     function dropdown() {
         var x = document.getElementById("innermenu");
         var y = document.getElementById("dropbut");
@@ -56,6 +85,7 @@
                 z.className = "active";
                 y.style = "color:#202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", true);
             }
         else
             {
@@ -63,98 +93,102 @@
                 z.className = "";
                 y.style = "color: #202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", false);
             }
     }
     
 </script>
 </head>
-    
-<div id="wrap">    
-<body>
-    <div id="menu">
-        
-        <header>
-            <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
-                <li id="temp">
-                <div id="innermenu" class="active">
-                <nav>
-                    <ul>
-                        <li><a href="installations.html">Installations</a></li>
-                        <li><a href="touchline.html">Touchline</a></li>
-                        <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
-                        <li><a href="processdrawings.html" style=color:#202020>Process Drawings</a></li>
-                        <li><a href="paintings.html">Paintings</a></li>
-                    </ul>
-                </nav>
-                </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
-                <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
-            </ul>
-        </nav>
-        
-        
-    </div>
-    
-    <main>
-        <div id="images" class="active">
-            <h2>Works: Process Drawings</h2>
-            <div id="column">
-                <img src="images/processdrawings/20EvelynSorochan-Ruland_Grey3(CLOSEUP)_28ftx3ft_AcrylicAndDryWall_2015.jpg">
-                <h3>Grey (3)</h3>
-                <p>Detail, acrylic and dry wall, 8ft x 3 ft, 2015.</p>
-                <img src="images/processdrawings/19EvelynSorochan-Ruland_Grey3_8ftx3ft_AcrylicAndDryWall_2015.jpg">
-                <h3>Grey (3)</h3>
-                <p>Acrylic and dry wall, 8ft x 3ft, 2015.</p>
-                <img src="images/processdrawings/18EvelynSorochan-Ruland_GrowingPains(closeup)_8_1_2ftx10ft_DuctTape_2015.jpg">
-                <h3>Growing Pains</h3>
-                <p>Detail, duct tape, 8 1/2ft x 10ft, 2015.</p>
-                <img src="images/processdrawings/17EvelynSorochan-Ruland_GrowingPains_8_1_2ft_10ft_DuctTape_2015.jpg">
-                <h3>Growing Pains</h3>
-                <p>Duct tape, 8 1/2ft x 10ft, 2015.</p>
-                <img src="images/processdrawings/16EvelynSorochan-Ruland_GetThePoint_(SIDEVIEW)_30_x22__Paper_2015.jpg">
-                <h3>Get The Point</h3>
-                <p>Side view, paper, 22” x 30”, 2015.</p>
-                <img src="images/processdrawings/15EvelynSorochan-Ruland_GetThePoint__22_x30__Paper_2015.jpg">
-                <h3>Get The Point</h3>
-                <p>Paper, 22” x 30”, 2015.</p>
-                <img src="images/processdrawings/14EvelynSorochan-Ruland_Black2_3_1_2ftx7ft_AcrylicAndDrywall_2015.jpg">
-                <h3>Black (2)</h3>
-                <p>Acrylic and dry wall, 3 1/2ft x 7ft, 2015.</p>
-                <img src="images/processdrawings/13EvelynSorochan-Ruland_Red1(CLOSEUP)_8ftx4ft_AcrylicAndDryWall_2014.jpg">
-                <h3>Red (1)</h3>
-                <p>Detail, acrylic paint and dry wall, 8ft x 4ft, 2014.</p>
-                <img src="images/processdrawings/12EvelynSorochan-Ruland_Red1_8ftx4ft_AcrylicAndDrywall_2014.jpg">
-                <h3>Red (1)</h3>
-                <p>Acrylic paint and dry wall, 8ft x 4ft, 2014.</p>
-                <img src="images/processdrawings/11EvelynSorochan-Ruland_ATouchOfOCD_72_x30__DrywallandAcrylic_2013.jpg">
-                <h3>A Touch Of O.C.D</h3>
-                <p>Paper, 72” x 30”, 2013.</p>
-                <img src="images/processdrawings/10EvelynSorochan-Ruland_RubItIn_44_x30__WhiteAndBlackPaper_2013.jpg">
-                <h3>Rub It In</h3>
-                <p>White and black paper, 44” x 30”, 2013.</p>
-                
- 
-            </div>
-            
+
+<div id="wrap">
+
+    <body>
+        <div id="menu">
+
+            <header>
+                <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
+                    <li id="temp">
+                        <div id="innermenu">
+                            <nav>
+                                <ul>
+                                    <li><a href="installations.html">Installations</a></li>
+                                    <li><a href="touchline.html">Touchline</a></li>
+                                    <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
+                                    <li><a href="processdrawings.html" style=color:#202020>Process Drawings</a></li>
+                                    <li><a href="paintings.html">Paintings</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script language="JavaScript" type="text/JavaScript">setupstor();</script>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
+                    <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+
+
         </div>
-    </main>
-   
-    <footer>
-        <p id="left-foot">
-            &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> 
-        </p>
-            
-      	<p id="rightfoot"><a href="#images">Back to top</a></p>
-    </footer>
-              
-</body>
+
+        <main>
+            <div id="images" class="active">
+                <h2>Works: Process Drawings</h2>
+                <div id="column">
+                    <img src="images/processdrawings/20EvelynSorochan-Ruland_Grey3(CLOSEUP)_28ftx3ft_AcrylicAndDryWall_2015.jpg">
+                    <h3>Grey (3)</h3>
+                    <p>Detail, acrylic and dry wall, 8ft x 3 ft, 2015.</p>
+                    <img src="images/processdrawings/19EvelynSorochan-Ruland_Grey3_8ftx3ft_AcrylicAndDryWall_2015.jpg">
+                    <h3>Grey (3)</h3>
+                    <p>Acrylic and dry wall, 8ft x 3ft, 2015.</p>
+                    <img src="images/processdrawings/18EvelynSorochan-Ruland_GrowingPains(closeup)_8_1_2ftx10ft_DuctTape_2015.jpg">
+                    <h3>Growing Pains</h3>
+                    <p>Detail, duct tape, 8 1/2ft x 10ft, 2015.</p>
+                    <img src="images/processdrawings/17EvelynSorochan-Ruland_GrowingPains_8_1_2ft_10ft_DuctTape_2015.jpg">
+                    <h3>Growing Pains</h3>
+                    <p>Duct tape, 8 1/2ft x 10ft, 2015.</p>
+                    <img src="images/processdrawings/16EvelynSorochan-Ruland_GetThePoint_(SIDEVIEW)_30_x22__Paper_2015.jpg">
+                    <h3>Get The Point</h3>
+                    <p>Side view, paper, 22” x 30”, 2015.</p>
+                    <img src="images/processdrawings/15EvelynSorochan-Ruland_GetThePoint__22_x30__Paper_2015.jpg">
+                    <h3>Get The Point</h3>
+                    <p>Paper, 22” x 30”, 2015.</p>
+                    <img src="images/processdrawings/14EvelynSorochan-Ruland_Black2_3_1_2ftx7ft_AcrylicAndDrywall_2015.jpg">
+                    <h3>Black (2)</h3>
+                    <p>Acrylic and dry wall, 3 1/2ft x 7ft, 2015.</p>
+                    <img src="images/processdrawings/13EvelynSorochan-Ruland_Red1(CLOSEUP)_8ftx4ft_AcrylicAndDryWall_2014.jpg">
+                    <h3>Red (1)</h3>
+                    <p>Detail, acrylic paint and dry wall, 8ft x 4ft, 2014.</p>
+                    <img src="images/processdrawings/12EvelynSorochan-Ruland_Red1_8ftx4ft_AcrylicAndDrywall_2014.jpg">
+                    <h3>Red (1)</h3>
+                    <p>Acrylic paint and dry wall, 8ft x 4ft, 2014.</p>
+                    <img src="images/processdrawings/11EvelynSorochan-Ruland_ATouchOfOCD_72_x30__DrywallandAcrylic_2013.jpg">
+                    <h3>A Touch Of O.C.D</h3>
+                    <p>Paper, 72” x 30”, 2013.</p>
+                    <img src="images/processdrawings/10EvelynSorochan-Ruland_RubItIn_44_x30__WhiteAndBlackPaper_2013.jpg">
+                    <h3>Rub It In</h3>
+                    <p>White and black paper, 44” x 30”, 2013.</p>
+
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p id="left-foot">
+                &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
+            </p>
+
+            <p id="rightfoot"><a href="#images">Back to top</a></p>
+        </footer>
+
+    </body>
 </div>
+
 </html>

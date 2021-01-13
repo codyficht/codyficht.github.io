@@ -1,52 +1,81 @@
 <!doctype html>
 <html>
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-T53KKNL53F');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<title>Abstract Reliefs</title>
-    
-<meta name="description" content="View abstract reliefs created by visual artist Evelyn Sorochan-Ruland.">
-    
-<link href="main.css" rel="stylesheet">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    	<!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-	<link rel="apple-touch-icon" href="/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="/favicon-144.png">
-	<meta name="msapplication-config" content="/browserconfig.xml">
-	<!-- ****** faviconit.com favicons ****** -->
-<!--[if lt IE 9]>
+        gtag('config', 'G-T53KKNL53F');
+
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>Abstract Reliefs</title>
+
+    <meta name="description" content="View abstract reliefs created by visual artist Evelyn Sorochan-Ruland.">
+
+    <link href="main.css" rel="stylesheet">
+
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+    <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+    <script language="JavaScript" type="text/JavaScript">
+
+        function setupstor()
+    {
+        var x = document.getElementById("innermenu");
+        var s = "false";
+        try{
+            s = sessionStorage.getItem("down");
+        }
+        catch(err)
+            {
+                //Not there
+            }
+        
+        if(s === "true")
+            {
+                x.className = "active";
+            }
+        else
+            {
+                setTimeout(dropdown, 500);
+            }
+        window.sessionStorage.setItem("down", true);
+    }
     
-<script language="JavaScript" type="text/JavaScript">
-    	
     function dropdown() {
+        
         var x = document.getElementById("innermenu");
         var y = document.getElementById("dropbut");
         var z = document.getElementById("images");
@@ -56,6 +85,7 @@
                 z.className = "active";
                 y.style = "color:#202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", true);
             }
         else
             {
@@ -63,116 +93,118 @@
                 z.className = "";
                 y.style = "color: #202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", false);
             }
     }
     
 </script>
-    
-</head>
-    
-<div id="wrap">    
-<body>
-    <div id="menu">
-        
-        <header>
-            <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
-                <li id="temp">
-                <div id="innermenu" class="active">
-                <nav>
-                    <ul>
-                        <li><a href="installations.html">Installations</a></li>
-                        <li><a href="touchline.html">Touchline</a></li>
-                        <li><a href="abstractreliefs.html" style=color:#202020>Abstract Reliefs</a></li>
-                        <li><a href="processdrawings.html">Process Drawings</a></li>
-                        <li><a href="paintings.html">Paintings</a></li>
-                    </ul>
-                </nav>
-                </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
-                <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
-            </ul>
-        </nav>
-        
-        
 
-    </div>
-    
-    <main>
-        <div id="images" class="active">
-            <h2>Works: Abstract Reliefs</h2>
-            <div id="column">
-                <img src="images/abstractreliefs/fend_good_front%20copy.jpg">
-                <h3>Fend</h3>
-                <p>Mixed media, 4ft x 5ft, 2017.</p>
-                <img src="images/abstractreliefs/bluedrywallclear%20copy.jpg">
-                <h3>Framed Motions</h3>
-                <p>Acrylic paint, spray paint, drywall tape, mixed media, 8ft x 8ft, 2017.</p>
-                <img src="images/abstractreliefs/SkinsAndSurfaces_ESR%20copy.jpg">
-                <h3>Skins and Surfaces</h3>
-                <p>Mixed media, 10ft x 12ft, 2017.</p>
-                <img src="images/abstractreliefs/IMG_2360%20copy.jpeg">
-                <h3>Notation (3)</h3>
-                <p>Mixed media, 4ft x 3ft, 2017.</p>
-                <img src="images/abstractreliefs/image2%20copy.JPG.jpg">
-                <h3>Notation (2)</h3>
-                <p>Mixed media, 4ft x 3ft, 2017.</p>
-                <img src="images/abstractreliefs/image1%20copy.JPG.jpg">
-                <h3>Notation (1)</h3>
-                <p>Mixed media, 4ft x 3ft, 2017.</p>
-                <img src="images/abstractreliefs/WPcloseupmiddlestripesmesh_good1copy.jpg">
-                <h3>Twisted Lines</h3>
-                <p>Detail, acrylic paint, spray paint, latex, mixed media, 8ft x 12ft, 2017.</p>
-                <img src="images/abstractreliefs/duplicate3.jpg">
-                <h3>Twisted Lines</h3>
-                <p>Detail, acrylic paint, spray paint, latex, mixed media, 8ft x 12ft, 2017.</p>
-                <img src="images/abstractreliefs/IMG_9174%20copy%202.jpg">
-                <h3>Crosscut</h3>
-                <p>Mixed media, 9ft x 11ft, 2016.</p>
-                <img src="images/abstractreliefs/03BlueRope_bottom_GOOD.dng%20copy%202.jpg">
-                <h3>Borderline</h3>
-                <p>Detail, mixed media, 6ft x 4ft, 2017.</p>
-                <img src="images/abstractreliefs/20170406_190846%20copy.jpg">
-                <h3>Borderline</h3>
-                <p>Mixed media, 6ft x 4ft, 2017.</p>
-                <img src="images/abstractreliefs/Pink1copy%20copy.jpg">
-                <h3>Crisscross</h3>
-                <p>Detail, latex paint, tile, 2ft x 8ft, 2016.</p>
-                <img src="images/abstractreliefs/crisscrossstraighton%20copy.jpg">
-                <h3>Crisscross</h3>
-                <p>Latex paint, tile, 2ft x 8ft, 2016.</p>
-                <img src="images/abstractreliefs/IMG_20170405_105450_341%20copy.jpg">
-                <h3>Strung Out</h3>
-                <p>Detail, wire, 9ft x 1ft, 2016.</p>
-                <img src="images/abstractreliefs/IMG_9105%20copy.jpg">
-                <h3>Strung Out</h3>
-                <p>Wire, 9ft x 1ft, 2016.</p>
-                <img src="images/abstractreliefs/20150324_162040-01%20copy.jpg">
-                <h3>Size Up</h3>
-                <p>Detail, mixed media, dimensions may vary, 2015.</p>
-                <img src="images/abstractreliefs/orange_ground%20copy.jpg">
-                <h3>Size Up</h3>
-                <p>Mixed media, dimensions may vary, 2015.</p>
-                
-            </div>
-            
+</head>
+
+<div id="wrap">
+
+    <body>
+        <div id="menu">
+
+            <header>
+                <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
+                    <li id="temp">
+                        <div id="innermenu">
+                            <nav>
+                                <ul>
+                                    <li><a href="installations.html">Installations</a></li>
+                                    <li><a href="touchline.html">Touchline</a></li>
+                                    <li><a href="abstractreliefs.html" style=color:#202020>Abstract Reliefs</a></li>
+                                    <li><a href="processdrawings.html">Process Drawings</a></li>
+                                    <li><a href="paintings.html">Paintings</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script language="JavaScript" type="text/JavaScript">setupstor();</script>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
+                    <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+
         </div>
-    </main>
-   
-    <footer>
-        <p id="left-foot">
-            &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> 
-        </p>
-            
-      	<p id="rightfoot"><a href="#images">Back to top</a></p>
-    </footer>
-              
-</body>
+
+        <main>
+            <div id="images" class="active">
+                <h2>Works: Abstract Reliefs</h2>
+                <div id="column">
+                    <img src="images/abstractreliefs/fend_good_front%20copy.jpg">
+                    <h3>Fend</h3>
+                    <p>Mixed media, 4ft x 5ft, 2017.</p>
+                    <img src="images/abstractreliefs/bluedrywallclear%20copy.jpg">
+                    <h3>Framed Motions</h3>
+                    <p>Acrylic paint, spray paint, drywall tape, mixed media, 8ft x 8ft, 2017.</p>
+                    <img src="images/abstractreliefs/SkinsAndSurfaces_ESR%20copy.jpg">
+                    <h3>Skins and Surfaces</h3>
+                    <p>Mixed media, 10ft x 12ft, 2017.</p>
+                    <img src="images/abstractreliefs/IMG_2360%20copy.jpeg">
+                    <h3>Notation (3)</h3>
+                    <p>Mixed media, 4ft x 3ft, 2017.</p>
+                    <img src="images/abstractreliefs/image2%20copy.JPG.jpg">
+                    <h3>Notation (2)</h3>
+                    <p>Mixed media, 4ft x 3ft, 2017.</p>
+                    <img src="images/abstractreliefs/image1%20copy.JPG.jpg">
+                    <h3>Notation (1)</h3>
+                    <p>Mixed media, 4ft x 3ft, 2017.</p>
+                    <img src="images/abstractreliefs/WPcloseupmiddlestripesmesh_good1copy.jpg">
+                    <h3>Twisted Lines</h3>
+                    <p>Detail, acrylic paint, spray paint, latex, mixed media, 8ft x 12ft, 2017.</p>
+                    <img src="images/abstractreliefs/duplicate3.jpg">
+                    <h3>Twisted Lines</h3>
+                    <p>Detail, acrylic paint, spray paint, latex, mixed media, 8ft x 12ft, 2017.</p>
+                    <img src="images/abstractreliefs/IMG_9174%20copy%202.jpg">
+                    <h3>Crosscut</h3>
+                    <p>Mixed media, 9ft x 11ft, 2016.</p>
+                    <img src="images/abstractreliefs/03BlueRope_bottom_GOOD.dng%20copy%202.jpg">
+                    <h3>Borderline</h3>
+                    <p>Detail, mixed media, 6ft x 4ft, 2017.</p>
+                    <img src="images/abstractreliefs/20170406_190846%20copy.jpg">
+                    <h3>Borderline</h3>
+                    <p>Mixed media, 6ft x 4ft, 2017.</p>
+                    <img src="images/abstractreliefs/Pink1copy%20copy.jpg">
+                    <h3>Crisscross</h3>
+                    <p>Detail, latex paint, tile, 2ft x 8ft, 2016.</p>
+                    <img src="images/abstractreliefs/crisscrossstraighton%20copy.jpg">
+                    <h3>Crisscross</h3>
+                    <p>Latex paint, tile, 2ft x 8ft, 2016.</p>
+                    <img src="images/abstractreliefs/IMG_20170405_105450_341%20copy.jpg">
+                    <h3>Strung Out</h3>
+                    <p>Detail, wire, 9ft x 1ft, 2016.</p>
+                    <img src="images/abstractreliefs/IMG_9105%20copy.jpg">
+                    <h3>Strung Out</h3>
+                    <p>Wire, 9ft x 1ft, 2016.</p>
+                    <img src="images/abstractreliefs/20150324_162040-01%20copy.jpg">
+                    <h3>Size Up</h3>
+                    <p>Detail, mixed media, dimensions may vary, 2015.</p>
+                    <img src="images/abstractreliefs/orange_ground%20copy.jpg">
+                    <h3>Size Up</h3>
+                    <p>Mixed media, dimensions may vary, 2015.</p>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p id="left-foot">
+                &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
+            </p>
+
+            <p id="rightfoot"><a href="#images">Back to top</a></p>
+        </footer>
+
+    </body>
 </div>
+
 </html>

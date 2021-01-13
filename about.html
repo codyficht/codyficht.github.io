@@ -2,51 +2,54 @@
 <html>
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-T53KKNL53F');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<title>About</title>
-    
-<meta name="description" content="Learn about visual artist Evelyn Sorochan-Ruland.">
-    
-<link href="main.css" rel="stylesheet">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    	<!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-	<link rel="apple-touch-icon" href="/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="/favicon-144.png">
-	<meta name="msapplication-config" content="/browserconfig.xml">
-	<!-- ****** faviconit.com favicons ****** -->
-<!--[if lt IE 9]>
+        gtag('config', 'G-T53KKNL53F');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>About</title>
+
+    <meta name="description" content="Learn about visual artist Evelyn Sorochan-Ruland.">
+
+    <link href="main.css" rel="stylesheet">
+
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+    <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-    
-<script language="JavaScript" type="text/JavaScript">
-    	
-    function dropdown() {
+
+    <script language="JavaScript" type="text/JavaScript">
+
+        function dropdown() {
         var x = document.getElementById("innermenu");
         var y = document.getElementById("dropbut");
         var z = document.getElementById("images");
@@ -56,6 +59,7 @@
                 z.className = "active";
                 y.style = "color:#202020";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", true);
             }
         else
             {
@@ -63,67 +67,112 @@
                 z.className = "";
                 y.style = "color: #616161";
                 y.innerHTML = "Works";
+                sessionStorage.setItem("down", false);
+            }
+        }
+        
+        
+        var x;
+        function dropfunc() {
+            
+            x  = setTimeout(dropdown, 9000);
+        }
+        
+        function cleartime()
+        {
+            try
+            {
+                clearTimeout(x);
+            }
+            catch
+            {
+                //no timer set yet
+            }
+        }
+    
+    function setup() {
+        var x = document.getElementById("innermenu");
+        var test = "false";
+        try
+        {
+            test = sessionStorage.getItem("down");
+        }
+        catch(err)
+        {
+             //not defined yet   
+        }
+        if(test === "true")
+        {
+            x.className = "active";
+            setTimeout(dropdown, 500);
+            sessionStorage.setItem("down", false);
+        }
+        else
+            {
+                x.className = "";
+                sessionStorage.setItem("down", false);
             }
     }
     
 </script>
-    
-</head>
-    
-<div id="wrap">    
-<body>
-    <div id="menu">
-        
-        <header>
-            <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#/" id="dropbut" onclick="dropdown(); setTimeout(dropdown, 9000)">Works</a></li>
-                <li id="temp">
-                <div id="innermenu" class="">
-                <nav>
-                    <ul>
-                        <li><a href="installations.html">Installations</a></li>
-                        <li><a href="touchline.html">Touchline</a></li>
-                        <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
-                        <li><a href="processdrawings.html">Process Drawings</a></li>
-                        <li><a href="paintings.html">Paintings</a></li>
-                    </ul>
-                </nav>
-                </div>
-                </li>
-                <li><a href="about.html" style=color:#222222>About</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
-                <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
-            </ul>
-        </nav>
-        
-        
 
-    </div>
-    
-    <main>
-        <div id="images">
-            <h2>About</h2>
-            <div id="column">
-                <img src="images/portrait/IMG_0545.jpg">
-                <h3>Biography</h3>
-                <p>Based in Ontario, Evelyn Sorochan-Ruland’s recent interdisciplinary work is influenced by her surroundings and familiar objects. The work resides in the aesthetic space of the in-between, most certainly hovering amidst painting and sculpture. Instinctively feeling her way through material dissonance and order, the work reminds the viewer the ways in which they interpret the world through their own visceral and tactile experiences.<br><br>She received both her BFA from the University of Guelph in (2014) and her MFA from the University of Victoria in (2018) with distinction. Sorochan-Ruland has been recognized for her work by receiving, The Oxford County Art Gallery Scholarship (2010), Audrey St. Denys & M. E. Johnson Scholarship (2017), and the Jessie Allan Forsyth Scholarship (2017). Sorochan-Ruland has also participated in residencies such as The Boarding House Arts Incubator Residency in Guelph Ontario, The Vermont Studio Centre, and was an instructor at the University of Victoria (2018). Her work has been exhibited across Canada and internationally, for instance at the FINA Gallery in Kelowna BC, Art Basil L.A, Ed Video (Booth) in Los Angeles, Ex Libris Gallery in Newcastle England, and The Living Arts Centre in Mississauga Ontario. In 2020 her work was unanimously selected to be acquired for the London Arts Council’s collection, she became a recipient of the OAC Emerging Visual Artists Creation Project Grant, and also received a Project Grant from the LAC.</p>
-            </div>
-            
+</head>
+
+<div id="wrap">
+
+    <body>
+        <div id="menu">
+
+            <header>
+                <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#/" id="dropbut" onclick="dropdown(); cleartime(); dropfunc();">Works</a></li>
+                    <li id="temp">
+                        <div id="innermenu">
+                            <nav>
+                                <ul>
+                                    <li><a href="installations.html">Installations</a></li>
+                                    <li><a href="touchline.html">Touchline</a></li>
+                                    <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
+                                    <li><a href="processdrawings.html">Process Drawings</a></li>
+                                    <li><a href="paintings.html">Paintings</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script language="JavaScript" type="text/JavaScript"> setup(); </script>
+                    </li>
+                    <li><a href="about.html" style=color:#222222>About</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
+                    <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+
+
+
         </div>
-    </main>
-   
-    <footer>
-        <p id="left-foot">
-            &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> 
-        </p>
-            
-      	<p id="rightfoot"><a href="#images">Back to top</a></p>
-    </footer>
-              
-</body>
-</div>
-</html>
+
+        <main>
+            <div id="images">
+                <h2>About</h2>
+                <div id="column">
+                    <img src="images/portrait/IMG_0545.jpg">
+                    <h3>Biography</h3>
+                    <p>Based in Ontario, Evelyn Sorochan-Ruland’s recent interdisciplinary work is influenced by her surroundings and familiar objects. The work resides in the aesthetic space of the in-between, most certainly hovering amidst painting and sculpture. Instinctively feeling her way through material dissonance and order, the work reminds the viewer the ways in which they interpret the world through their own visceral and tactile experiences.<br><br>She received both her BFA from the University of Guelph in (2014) and her MFA from the University of Victoria in (2018) with distinction. Sorochan-Ruland has been recognized for her work by receiving, The Oxford County Art Gallery Scholarship (2010), Audrey St. Denys & M. E. Johnson Scholarship (2017), and the Jessie Allan Forsyth Scholarship (2017). Sorochan-Ruland has also participated in residencies such as The Boarding House Arts Incubator Residency in Guelph Ontario, The Vermont Studio Centre, and was an instructor at the University of Victoria (2018). Her work has been exhibited across Canada and internationally, for instance at the FINA Gallery in Kelowna BC, Art Basil L.A, Ed Video (Booth) in Los Angeles, Ex Libris Gallery in Newcastle England, and The Living Arts Centre in Mississauga Ontario. In 2020 her work was unanimously selected to be acquired for the London Arts Council’s collection, she became a recipient of the OAC Emerging Visual Artists Creation Project Grant, and also received a Project Grant from the LAC.</p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p id="left-foot">
+                &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
+            </p>
+
+            <p id="rightfoot"><a href="#images">Back to top</a></p>
+        </footer>
+
+    </body>
+</div></html>
