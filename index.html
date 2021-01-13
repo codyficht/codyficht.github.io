@@ -60,24 +60,26 @@
     
     
 <script language="JavaScript" type="text/JavaScript">
-    	
+
     function dropdown() {
         var x = document.getElementById("innermenu");
         var y = document.getElementById("dropbut");
-        if (x.style.display === "none")
+        var z = document.getElementById("images");
+        if (x.className === "")
             {
-                x.style.display = "block";
+                x.className = "active";
+                z.className = "active";
                 y.style = "color:#202020";
-                y.innerHTML = "Works -";
+                y.innerHTML = "Works";
             }
         else
             {
-                x.style.display = "none";
+                x.className = "";
+                z.className = "";
                 y.style = "color: #616161";
                 y.innerHTML = "Works";
             }
     }
-    
     
     
     function imageRotate() {
@@ -165,7 +167,7 @@
             <ul>
                 <li id="droptitle"><a href="#/" id="dropbut" onclick="dropdown()">Works</a></li>
                 <li id="temp">
-                <div id="innermenu" style="display:none">
+                <div id="innermenu">
                 <nav>
                     <ul>
                         <li><a href="installations.html">Installations</a></li>

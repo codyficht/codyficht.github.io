@@ -49,18 +49,20 @@
     function dropdown() {
         var x = document.getElementById("innermenu");
         var y = document.getElementById("dropbut");
-        if (x.style.display === "none")
+        var z = document.getElementById("images");
+        if (x.className === "")
             {
-                x.style.display = "block";
+                x.className = "active";
+                z.className = "active";
                 y.style = "color:#202020";
-                y.innerHTML = "Works -";
+                y.innerHTML = "Works";
             }
         else
             {
-                x.style.display = "none";
-                y.style = "color: #616161";
+                x.className = "";
+                z.className = "";
+                y.style = "color: #202020";
                 y.innerHTML = "Works";
-                
             }
     }
     
@@ -79,7 +81,7 @@
             <ul>
                 <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#222222>Works</a></li>
                 <li id="temp">
-                <div id="innermenu" style="display:none">
+                <div id="innermenu" class="active">
                 <nav>
                     <ul>
                         <li><a href="installations.html">Installations</a></li>
@@ -103,7 +105,7 @@
     </div>
     
     <main>
-        <div id="images">
+        <div id="images" class="active">
             <h2>Works: Touchline</h2>
             <div id="column">
                 <img src="images/touchline/11Touchline_ESR.jpg">
