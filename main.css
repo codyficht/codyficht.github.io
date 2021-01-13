@@ -707,7 +707,7 @@ font-family: 'Montserrat', sans-serif;
         float: none;
         width: 95%;
         margin:auto;
-        margin-top: 260px;
+        margin-top: 230px;
         padding:0;
         margin-bottom: 80px;
         min-width: 360px;
@@ -721,7 +721,7 @@ font-family: 'Montserrat', sans-serif;
     
     
     #images {
-        margin-top: 260px;
+        margin-top: 230px;
         transition: margin-top 0.5s;
     }
 
