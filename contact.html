@@ -1,23 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-T53KKNL53F');
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <title>About</title>
+    <title>Contact</title>
 
-    <meta name="description" content="Learn about visual artist Evelyn Sorochan-Ruland.">
+    <meta name="description" content="Contact information for Evelyn Sorochan-Ruland.">
 
     <link href="main.css" rel="stylesheet">
 
@@ -71,7 +59,19 @@
             }
         }
         
-        
+        function resettime()
+        {
+            var x = document.getElementById("innermenu");
+            if(x.className == "active")
+            {
+                //do nothing
+             }
+            else
+            {
+                cleartime(x);
+            }
+        }
+    
         var x;
         function dropfunc() {
             
@@ -89,20 +89,7 @@
                 //no timer set yet
             }
         }
-                
-        function resettime()
-        {
-            var x = document.getElementById("innermenu");
-            if(x.className == "active")
-            {
-                //do nothing
-             }
-            else
-            {
-                cleartime(x);
-            }
-        }
-    
+        
     function setup() {
         var x = document.getElementById("innermenu");
         var test = "false";
@@ -127,6 +114,7 @@
             }
     }
     
+    
 </script>
 
 </head>
@@ -135,10 +123,10 @@
 
     <body>
         <div id="menu">
-
             <header>
                 <h1><a href="index.html">Evelyn <br> Sorochan-Ruland</a></h1>
             </header>
+
             <nav>
                 <ul>
                     <li><a href="#/" id="dropbut" onclick="dropdown(); cleartime(); dropfunc(); resettime();">Works +</a></li>
@@ -156,28 +144,27 @@
                         </div>
                         <script language="JavaScript" type="text/JavaScript"> setup(); </script>
                     </li>
-                    <li><a href="about.html" style=color:#222222>About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" style=color:#222222>Contact</a></li>
                     <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
                 </ul>
             </nav>
-
-
 
         </div>
 
         <main>
             <div id="images">
-                <h2>About</h2>
+                <h2>Contact</h2>
                 <div id="column">
-                    <img src="images/portrait/IMG_0545.jpg">
-                    <h3>Biography</h3>
-                    <p>Based in Ontario, Evelyn Sorochan-Ruland’s recent interdisciplinary work is influenced by her surroundings and familiar objects. The work resides in the aesthetic space of the in-between, most certainly hovering amidst painting and sculpture. Instinctively feeling her way through material dissonance and order, the work reminds the viewer the ways in which they interpret the world through their own visceral and tactile experiences.<br><br>She received both her BFA from the University of Guelph in (2014) and her MFA from the University of Victoria in (2018) with distinction. Sorochan-Ruland has been recognized for her work by receiving, The Oxford County Art Gallery Scholarship (2010), Audrey St. Denys & M. E. Johnson Scholarship (2017), and the Jessie Allan Forsyth Scholarship (2017). Sorochan-Ruland has also participated in residencies such as The Boarding House Arts Incubator Residency in Guelph Ontario, The Vermont Studio Centre, and was an instructor at the University of Victoria (2018). Her work has been exhibited across Canada and internationally, for instance at the FINA Gallery in Kelowna BC, Art Basil L.A, Ed Video (Booth) in Los Angeles, Ex Libris Gallery in Newcastle England, and The Living Arts Centre in Mississauga Ontario. In 2020 her work was unanimously selected to be acquired for the London Arts Council’s collection, she became a recipient of the OAC Emerging Visual Artists Creation Project Grant, and also received a Project Grant from the LAC.</p>
+                    <p>Send Evelyn Sorochan-Ruland an email <br>using the link below.<br>
+                        <a href="mailto:evelyn_sr@icloud.com">EMAIL</a>
+                    </p>
                 </div>
 
             </div>
         </main>
+
 
         <footer>
             <p id="left-foot">

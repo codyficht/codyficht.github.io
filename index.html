@@ -76,7 +76,7 @@
                 x.className = "active";
                 z.className = "active";
                 y.style = "color:#202020";
-                y.innerHTML = "Works";
+                y.innerHTML = "Works −";
                 sessionStorage.setItem("down", true);
             }
         else
@@ -84,7 +84,7 @@
                 x.className = "";
                 z.className = "";
                 y.style = "color: #616161";
-                y.innerHTML = "Works";
+                y.innerHTML = "Works +";
                 sessionStorage.setItem("down", false);
             }
         }
@@ -102,6 +102,19 @@
             catch
             {
                 //no timer set yet
+            }
+        }
+                
+        function resettime()
+        {
+            var x = document.getElementById("innermenu");
+            if(x.className == "active")
+            {
+                //do nothing
+             }
+            else
+            {
+                cleartime(x);
             }
         }
     
@@ -218,7 +231,7 @@
 
             <nav>
                 <ul>
-                    <li id="droptitle"><a href="#/" id="dropbut" onclick="dropdown(); cleartime(); dropfunc();">Works</a></li>
+                    <li id="droptitle"><a href="#/" id="dropbut" onclick="dropdown(); cleartime(); dropfunc(); resettime();">Works +</a></li>
                     <li id="temp">
                         <div id="innermenu">
                             <nav>
@@ -235,7 +248,7 @@
                     </li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="cv.html">CV</a></li>
-                    <li><a href="mailto:eviersr@gmail.com">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
 
                 </ul>
