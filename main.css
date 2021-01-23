@@ -172,7 +172,7 @@ h2 {
 #images {
     float: right;
     display: block;
-    margin-top: 145px;
+    margin-top: 130px;
     width: 55%;
     padding-right: 20px;
     padding-bottom: 150px;
@@ -451,7 +451,7 @@ footer a:hover {
 
 }
 
-@media screen and (max-width:825px) {
+@media screen and (max-width:770px) {
 
     h1 {
         font-size: 2.2em;
@@ -611,7 +611,7 @@ footer a:hover {
 }
 
 
-@media screen and (max-width:825px) {
+@media screen and (max-width:770px) {
 
     h1 {
         font-size: 2.5em;
