@@ -47,11 +47,11 @@ nav {
     width: 290px;
     padding-left: 2px;
     opacity: 100%;
-    
+
 }
 
 nav ul {
-    
+
     list-style: none;
     padding: 0;
     padding-top: 35px;
@@ -153,7 +153,7 @@ h1 a:hover {
 }
 
 h1 {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     transition-duration: 0.2s;
 }
 
@@ -182,7 +182,7 @@ h2 {
     max-width: 100%;
     max-height: 750px;
     padding-top: 40px;
-    
+
 }
 
 
@@ -243,7 +243,7 @@ h4 {
     padding-top: 0;
     padding-bottom: 20px;
     font-size: 0.9em;
-    
+
 }
 
 #bio a {
@@ -283,7 +283,7 @@ footer {
     width: 100%;
     margin-bottom: 0;
     padding-bottom: 0;
-   
+
 }
 
 footer a {
@@ -397,8 +397,6 @@ footer a:hover {
     margin: 0px;
     padding-left: 15px;
     border: none;
-
-
 }
 
 #innermenu a:hover {
@@ -443,9 +441,6 @@ footer a:hover {
 
 }
 
-#innermenu #new a:hover{
-    color: #a33376;
-}
 
 
 @media screen and (max-width:1100px) {
@@ -699,7 +694,7 @@ footer a:hover {
         transition-duration: 0.1s;
         padding: 0;
         margin: 0;
-        
+
     }
 
     #innermenu nav li:first-child {
@@ -711,7 +706,7 @@ footer a:hover {
     nav a {
         font-weight: 300;
     }
-    
+
     nav a:hover {
         padding-left: 0px;
     }
@@ -770,20 +765,20 @@ footer a:hover {
         max-height: 280px;
         margin-top: 5px
     }
-    
+
     #dropbut {
         font-weight: 300;
-        
+
     }
 
     #dropbut:hover {
         padding-left: 0px;
     }
-    
+
     #innermenu a:hover {
-    padding-left: 0px;
-}
-    
+        padding-left: 0px;
+    }
+
     #images {
         float: none;
         width: 95%;
@@ -825,7 +820,7 @@ footer a:hover {
     }
 
     footer {
-        position:absolute;
+        position: absolute;
         font-size: 0.6em;
         -webkit-text-size-adjust: 100%;
         -moz-text-size-adjust: 100%;
@@ -833,15 +828,15 @@ footer a:hover {
         font-size: 0.7em;
         padding-bottom: 5px;
     }
-    
+
     #left-foot {
-    float: none;
-    width: 60%;
-    margin-bottom: 0.5px;
-    margin-top: 2px;
-    margin:auto;
-    background-color: #fafafa;
-}
+        float: none;
+        width: 60%;
+        margin-bottom: 0.5px;
+        margin-top: 2px;
+        margin: auto;
+        background-color: #fafafa;
+    }
 
 }
 
