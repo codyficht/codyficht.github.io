@@ -78,6 +78,7 @@ nav a {
 
 nav a:hover {
     color: #151515;
+    padding-left: 1px;
 }
 
 section nav {
@@ -375,7 +376,13 @@ footer a:hover {
 }
 
 #dropbut:hover {
+    color: #151515 !important;
+    padding-left: 1px;
+}
+
+#dropbut.active:hover {
     color: #151515;
+    padding-left: 1px;
 }
 
 #innermenu {
@@ -396,6 +403,7 @@ footer a:hover {
 
 #innermenu a:hover {
     color: #151515;
+    padding-left: 1px;
 }
 
 #innermenu ul {
@@ -741,7 +749,7 @@ footer a:hover {
     }
 
     #innermenu nav a {
-        font-size: 0.55em;
+        font-size: 0.60em;
         font-weight: 300;
         color: #525252;
     }
@@ -771,6 +779,11 @@ footer a:hover {
     #dropbut:hover {
         padding-left: 0px;
     }
+    
+    #innermenu a:hover {
+    padding-left: 0px;
+}
+    
     #images {
         float: none;
         width: 95%;
