@@ -133,7 +133,7 @@
         if(test === "true")
         {
             x.className = "active";
-            setTimeout(dropdown, 500);
+            setTimeout(dropdown, 100);
             sessionStorage.setItem("down", false);
         }
         else
@@ -149,21 +149,23 @@
         var imgArr = new Array();
         var linkArr = new Array();
         
-        imgArr[0] = 'images/Homepage/09installfromfront_landscape.jpg';
-        imgArr[1] = 'images/Homepage/crisscross copy.jpg';
-        imgArr[2] = 'images/Homepage/duplicate3 copy.jpg';
-        imgArr[3] = 'images/Homepage/fend_good_front copy.jpg';
-        imgArr[4] = 'images/Homepage/scrum_landscape_5good.jpg';
-        imgArr[5] = 'images/Homepage/SkinsAndSurfaces_ESR copy.jpg';
-        imgArr[6] = 'images/Homepage/Touchline_12_17_ESR.jpg';
+        imgArr[0] = 'images/OAC/04ESRPushback.jpg';
+        imgArr[1] = 'images/Homepage/09installfromfront_landscape.jpg';
+        imgArr[2] = 'images/Homepage/crisscross copy.jpg';
+        imgArr[3] = 'images/Homepage/duplicate3 copy.jpg';
+        imgArr[4] = 'images/Homepage/fend_good_front copy.jpg';
+        imgArr[5] = 'images/Homepage/scrum_landscape_5good.jpg';
+        imgArr[6] = 'images/Homepage/SkinsAndSurfaces_ESR copy.jpg';
+        imgArr[7] = 'images/Homepage/Touchline_12_17_ESR.jpg';
         
-        linkArr[0] = "installations.html";
-        linkArr[1] = "abstractreliefs.html";
+        linkArr[0] = "recent.html";
+        linkArr[1] = "installations.html";
         linkArr[2] = "abstractreliefs.html";
         linkArr[3] = "abstractreliefs.html";
-        linkArr[4] = "installations.html";
-        linkArr[5] = "abstractreliefs.html";
-        linkArr[6] = "touchline.html";
+        linkArr[4] = "abstractreliefs.html";
+        linkArr[5] = "installations.html";
+        linkArr[6] = "abstractreliefs.html";
+        linkArr[7] = "studies.html";
         
         
         document.getElementById("links").src = imgArr[num];
@@ -173,7 +175,7 @@
         function handler() {
             document.getElementById("links").href = linkArr[num];
             document.getElementById("homeSlideShow").src = imgArr[num];
-            num = (num + 1) % 7;  
+            num = (num + 1) % 8;  
         }
     
         //Control progress bar
@@ -236,10 +238,10 @@
                         <div id="innermenu">
                             <nav>
                                 <ul>
+                                    <li id="new"><a id="new" href="recent.html">Recent</a></li>
                                     <li><a href="installations.html">Installations</a></li>
-                                    <li><a href="touchline.html">Touchline</a></li>
+                                    <li><a href="studies.html">Studies</a></li>
                                     <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
-                                    <li><a href="processdrawings.html">Process Drawings</a></li>
                                     <li><a href="paintings.html">Paintings</a></li>
                                 </ul>
                             </nav>
@@ -273,7 +275,7 @@
 
         <footer>
             <p id="left-foot">
-                &copy; Evelyn Sorochan-Ruland - Copyright 2020<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
+                &copy; Evelyn Sorochan-Ruland - Copyright 2021<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
             </p>
 
         </footer>
