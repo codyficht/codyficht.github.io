@@ -97,34 +97,30 @@
                 sessionStorage.setItem("down", false);
             }
     }
+        
         var down = 0;
-            //jQuery Smooth scrolling behaviours
-        function locat() {
-            // Handler for .ready() called.
-            if( $('#rightfoot').css('display')=='none')  {
-            try {
-                down = sessionStorage.getItem("scroll");
-            } catch {
-                //not there yet
-            }
-            window.scrollTo(0, down);
-            var hash = '#top';
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 500, function(){
-                        window.location.hash = hash;
-                    });
-            }
-            sessionStorage.setItem("scroll", 0); 
-        }
-        
-        
+        //jQuery Smooth scrolling behaviours
         $(document).ready(function(){
             try {
                 down = sessionStorage.getItem("scroll");
             } catch {
                 //not there yet
             }
+            // Handler for .ready() called.
+            if( ($('#rightfoot').css('display')=='none')) {
+                window.scrollTo(0, down);
+                var hash = '#top';
+                $('html, body').animate({
+                scrollTop: $(hash).offset().top
+                }, 300, function(){
+                        window.location.hash = hash;
+                });
+            }
+            sessionStorage.setItem("scroll", 0); 
+        });
+        
+        
+        $(document).ready(function(){
             // Add smooth scrolling to all links
             $("a").on('click', function(event) {
                 if (this.hash !== "") {
@@ -150,7 +146,7 @@
 
 <div id="wrap">
 
-    <body onload="locat();">
+    <body>
         <div id="menu">
 
             <header>
