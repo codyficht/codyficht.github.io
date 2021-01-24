@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Contact</title>
 
     <meta name="description" content="Contact information for Evelyn Sorochan-Ruland.">
@@ -114,11 +113,6 @@
                 sessionStorage.setItem("down", false);
             }
     }
-        
-        window.onbeforeunload = function () {
-            scroll = $(window).scrollTop();
-            sessionStorage.setItem("scroll", scroll); 
-        }
     
 </script>
 
@@ -139,11 +133,11 @@
                         <div id="innermenu">
                             <nav>
                                 <ul>
-                                    <li id="new"><a id="new" href="recent.html">Recent</a></li>
-                                    <li><a href="installations.html">Installations</a></li>
-                                    <li><a href="studies.html">Studies</a></li>
-                                    <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
-                                    <li><a href="paintings.html">Paintings</a></li>
+                                    <li id="new"><a id="new" href="recent.html#top">Recent</a></li>
+                                    <li><a href="installations.html#top">Installations</a></li>
+                                    <li><a href="studies.html#top">Studies</a></li>
+                                    <li><a href="abstractreliefs.html#top">Abstract Reliefs</a></li>
+                                    <li><a href="paintings.html#top">Paintings</a></li>
                                 </ul>
                             </nav>
                         </div>

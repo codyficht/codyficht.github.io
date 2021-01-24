@@ -4,7 +4,6 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -100,49 +99,6 @@
             }
     }
         
-        var down = 0;
-        //jQuery Smooth scrolling behaviours
-        $(document).ready(function(){
-            // Handler for .ready() called.
-            try {
-                down = sessionStorage.getItem("scroll");
-            } catch {
-                //not there yet
-            }
-            if( ($('#rightfoot').css('display')=='none')) {
-                window.scrollTo(0, down);
-                var hash = '#top';
-                $('html, body').animate({
-                scrollTop: $(hash).offset().top
-                }, 300, function(){
-                        window.location.hash = hash;
-                });
-            }
-            sessionStorage.setItem("scroll", 0); 
-        });
-        
-        
-        $(document).ready(function(){
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-        
-        
-        window.onbeforeunload = function () {
-            scroll = $(window).scrollTop();
-            sessionStorage.setItem("scroll", scroll); 
-        }
-    
 </script>
 
 </head>
@@ -162,11 +118,11 @@
                         <div id="innermenu">
                             <nav>
                                 <ul>
-                                    <li id="new"><a id="new" href="recent.html">Recent</a></li>
-                                    <li><a href="installations.html">Installations</a></li>
-                                    <li><a href="studies.html" style=color:#171717>Studies</a></li>
-                                    <li><a href="abstractreliefs.html">Abstract Reliefs</a></li>
-                                    <li><a href="paintings.html">Paintings</a></li>
+                                    <li id="new"><a id="new" href="recent.html#top">Recent</a></li>
+                                    <li><a href="installations.html#top">Installations</a></li>
+                                    <li><a href="studies.html#top" style=color:#171717>Studies</a></li>
+                                    <li><a href="abstractreliefs.html#top">Abstract Reliefs</a></li>
+                                    <li><a href="paintings.html#top">Paintings</a></li>
                                 </ul>
                             </nav>
                         </div>
