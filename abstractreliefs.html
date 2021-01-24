@@ -100,26 +100,21 @@
     
         //jQuery Smooth scrolling behaviours
         $(document).ready(function () {
-        // Handler for .ready() called.
-            
-            //First check if mobile
-            if( $('#rightfoot').css('display')=='none') {
-            
-                var down = 0;
-                        try {
-                            down = sessionStorage.getItem("scroll");
-                        } catch {
-                            //not there yet
-                        }
-                if(down <= 15) {         
-                    $('html, body').animate({
-                        scrollTop: $('#top').offset().top
-                    }, 'slow');
-                } else {
-                    window.scrollTo(0, down);
-                }
-                sessionStorage.setItem("scroll", 0);
+            // Handler for .ready() called.
+            var down = 0;
+            try {
+                down = sessionStorage.getItem("scroll");
+            } catch {
+                //not there yet
             }
+            window.scrollTo(0, down);
+            var hash = '#top';
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                        window.location.hash = hash;
+                    });
+            sessionStorage.setItem("scroll", 0); 
         });
         
         

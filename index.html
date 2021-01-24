@@ -3,6 +3,7 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -215,6 +216,50 @@
         
         
     }
+            
+        //jQuery Smooth scrolling behaviours
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            
+            //This is a mobile check
+            //if( $('#rightfoot').css('display')=='none')  {}
+            var down = 0;
+            try {
+                down = sessionStorage.getItem("scroll");
+            } catch {
+                //not there yet
+            }
+            window.scrollTo(0, down);
+            var hash = '#top';
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                        window.location.hash = hash;
+                    });
+            sessionStorage.setItem("scroll", 0); 
+        });
+        
+        
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+        
+        
+        window.onbeforeunload = function () {
+            scroll = $(window).scrollTop();
+            sessionStorage.setItem("scroll", scroll); 
+        }
     
 </script>
 
@@ -257,6 +302,7 @@
             </nav>
 
         </div>
+        <div id="top"></div>
         <main>
             <div id="images">
                 <section>
