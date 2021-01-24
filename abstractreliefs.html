@@ -97,12 +97,14 @@
                 sessionStorage.setItem("down", false);
             }
     }
+        
+        var down = 0;
     
         //jQuery Smooth scrolling behaviours
         function locat() {
             // Handler for .ready() called.
             if( $('#rightfoot').css('display')=='none')  {
-            var down = 0;
+
             try {
                 down = sessionStorage.getItem("scroll");
             } catch {
@@ -121,6 +123,12 @@
         
         
         $(document).ready(function(){
+            try {
+                down = sessionStorage.getItem("scroll");
+            } catch {
+                //not there yet
+            }
+            window.scrollTo(0, down);
             // Add smooth scrolling to all links
             $("a").on('click', function(event) {
                 if (this.hash !== "") {
