@@ -15,9 +15,6 @@ main {
     display: block;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
     margin: 0;
@@ -800,12 +797,12 @@ footer a:hover {
 
 
     #images {
-        margin-top: 230px;
+        margin-top: 200px;
         transition: margin-top 0.5s;
     }
 
     #images.active {
-        margin-top: 470px;
+        margin-top: 460px;
     }
 
 
