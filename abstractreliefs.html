@@ -99,7 +99,7 @@
     }
     
         //jQuery Smooth scrolling behaviours
-        $(document).ready(function () {
+        function locat() {
             // Handler for .ready() called.
             if( $('#rightfoot').css('display')=='none')  {
             var down = 0;
@@ -117,7 +117,7 @@
                     });
             }
             sessionStorage.setItem("scroll", 0); 
-        });
+        }
         
         
         $(document).ready(function(){
@@ -148,7 +148,7 @@
 
 <div id="wrap">
 
-    <body>
+    <body onload="locat();">
         <div id="menu">
 
             <header>
