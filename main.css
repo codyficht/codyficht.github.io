@@ -25,8 +25,12 @@ h1 {
 
 
 @keyframes showName {
-  0% { transform: translate3d(0, -100%, 0); }
-  40%, 60% { transform: translate3d(0, -50%, 0); }
+  0% { transform: translate3d(0, -110%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes showNameBtm {
+  0% { transform: translate3d(0, -170%, 0); }
   100% { transform: translate3d(0, 0, 0); }
 }
 
@@ -42,7 +46,7 @@ header {
 #homeani {
   overflow: hidden;
   transform: translate(50%, 50%);
-  height: 74px;
+  height: 30px;
   margin-top: 2px;
     padding-left: 0px;
     margin-left: 0px;
@@ -52,10 +56,37 @@ header {
 
 #homeani {
   animation: showName 1s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, -110%);
+}
+
+#homeanibtm {
+  overflow: hidden;
+  transform: translate(50%, 50%);
+  height: 47px;
+  margin-top: 20px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  
+}
+
+#homeani {
+    height: 36px;
+    margin-bottom: 0;
+}
+
+#homeanibtm {
+  animation: showNameBtm 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   bottom: 0;
-  transform: translate(0, -100%);
+  transform: translate(0, -170%);
+
 }
 
 
@@ -534,6 +565,11 @@ footer a:hover {
         animation: none;
         transform: translate(0%, 0%);
     }
+    
+    #homeanibtm {
+        animation: none;
+        transform: translate(0%, 0%);
+    }
     h1 {
         font-size: 2.2em;
         background-color: #fafafa;
@@ -705,8 +741,14 @@ footer a:hover {
     }
     
     #homeani {
-        padding-bottom: 46px;
+        padding-bottom: 10px;
         padding-top: 8px;
+    }
+    
+    #homeanibtm {
+        padding-bottom: 27px;
+        padding-top: 0px;
+        margin-top: 0px
     }
 
     #wrap {
