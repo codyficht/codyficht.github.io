@@ -52,6 +52,9 @@
 
     <script language="JavaScript" type="text/JavaScript">
 
+        
+        var scroll = 0;
+        
         function setupstor()
     {
         var x = document.getElementById("innermenu");
@@ -100,9 +103,25 @@
         //jQuery Smooth scrolling behaviours
         $(document).ready(function () {
         // Handler for .ready() called.
-            $('html, body').animate({
-                scrollTop: $('#top').offset().top
-            }, 'slow');
+            
+            //First check if mobile
+            if( $('#rightfoot').css('display')=='none') {
+            
+                var down = 0;
+                        try {
+                            down = sessionStorage.getItem("scroll");
+                        } catch {
+                            //not there yet
+                        }
+                if(down <= 15) {         
+                    $('html, body').animate({
+                        scrollTop: $('#top').offset().top
+                    }, 'slow');
+                } else {
+                    window.scrollTo(0, down);
+                }
+                sessionStorage.setItem("scroll", 0);
+            }
         });
         
         
@@ -111,7 +130,6 @@
             $("a").on('click', function(event) {
                 if (this.hash !== "") {
                     event.preventDefault();
-
                     var hash = this.hash;
                     $('html, body').animate({
                     scrollTop: $(hash).offset().top
@@ -121,6 +139,12 @@
                 } // End if
             });
         });
+        
+        
+        window.onbeforeunload = function () {
+            scroll = $(window).scrollTop();
+            sessionStorage.setItem("scroll", scroll); 
+        }
     
 </script>
 
