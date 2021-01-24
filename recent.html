@@ -101,6 +101,7 @@
             //jQuery Smooth scrolling behaviours
         $(document).ready(function () {
             // Handler for .ready() called.
+            if( $('#rightfoot').css('display')=='none')  {
             var down = 0;
             try {
                 down = sessionStorage.getItem("scroll");
@@ -111,9 +112,10 @@
             var hash = '#top';
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 800, function(){
+            }, 500, function(){
                         window.location.hash = hash;
                     });
+            }
             sessionStorage.setItem("scroll", 0); 
         });
         
