@@ -552,8 +552,6 @@ footer a:hover {
 
 @media screen and (max-width:770px) {
 
-     
-    
     #homeani {
         animation: none;
         transform: translate(0%, 0%);
