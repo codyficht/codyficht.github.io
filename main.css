@@ -529,7 +529,6 @@ footer a:hover {
 }
 
 #new {
-  display: inline-block;
   animation: wiggle 8s infinite;
 }
 
