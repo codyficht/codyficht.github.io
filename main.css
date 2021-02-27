@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500&display=swap');
 
 
 
@@ -16,82 +14,68 @@ html {
     scroll-behavior: smooth;
 }
 
-h1 {
-    margin-top: 2px
-}
-
-
 @keyframes showName {
-  0% { transform: translate3d(0, -110%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+    0% {
+        transform: translate3d(0, -110%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 @keyframes showNameBtm {
-  0% { transform: translate3d(0, -170%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+    0% {
+        transform: translate3d(0, -170%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
-#fill {
-    background-color: red;
-    padding: 5px;
-}
 
 header {
     overflow: hidden;
-    
+
 }
+
 #homeani {
-  overflow: hidden;
-  transform: translate(50%, 50%);
-  height: 30px;
-  margin-top: 2px;
+    overflow: hidden;
+    transform: translate(50%, 50%);
+    height: 30px;
+    margin-top: 2px;
     padding-left: 0px;
     margin-left: 0px;
-      
-  
+
 }
 
 #homeani {
-  animation: showName 1s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-  bottom: 0;
-  transform: translate(0, -110%);
-}
-
-#homeanibtm {
-  overflow: hidden;
-  transform: translate(50%, 50%);
-  height: 47px;
-  margin-top: 20px;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-top: 1px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  
-}
-
-#homeani {
+    animation: showName 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, -110%);
     height: 36px;
     margin-bottom: 0;
 }
 
 #homeanibtm {
-  animation: showNameBtm 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  bottom: 0;
-  transform: translate(0, -170%);
-
+    overflow: hidden;
+    transform: translate(50%, 50%);
+    height: 47px;
+    margin-top: 20px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    animation: showNameBtm 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, -170%);
 }
-
-@keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-
 
 body {
     margin: 0;
@@ -111,12 +95,13 @@ body {
     background-color: #fafafa;
     margin: 0 auto;
     width: 100%;
+    height: 100vh;
     max-width: 1200px;
     min-width: 768px;
+    min-height: 100vh;
     overflow: auto;
     position: relative;
-    min-height: 100%;
-    min-height: 100vh;
+
 }
 
 nav {
@@ -226,6 +211,7 @@ h1 a {
 
 h1 {
     margin-bottom: 10px;
+    margin-top: 2px
 }
 
 h2 {
@@ -247,6 +233,7 @@ h2 {
     width: 55%;
     padding-right: 20px;
     padding-bottom: 150px;
+    min-height: 300px;
 }
 
 #images img {
@@ -320,8 +307,6 @@ h4 {
     color: #a33376;
 }
 
-
-
 #column a {
     color: #a33376;
 }
@@ -394,6 +379,7 @@ footer a:hover {
 }
 
 #right-foot {
+    display: none;
     margin-left: 62%;
     box-shadow: 2px 2px black;
 }
@@ -404,7 +390,7 @@ footer a:hover {
     max-width: 300px;
     min-width: 320px;
     margin-bottom: 0.5px;
-    margin-right: 50%;
+    margin-right: 0;
     margin-top: 2px;
     background-color: #fafafa;
     padding-bottom: 7px;
@@ -414,21 +400,6 @@ footer a:hover {
 #right-foot p {
     font-family: 'Spartan', sans-serif;
     color: #424242;
-}
-
-#progressBar {
-    width: 60%;
-    margin: auto;
-    background-color: #fafafa;
-    border-radius: 1px;
-}
-
-#bar {
-    width: 1%;
-    height: 3px;
-    background-color: #ebebeb;
-    border-radius: 1px;
-    transition-duration: .02s;
 }
 
 #dropbut {
@@ -450,16 +421,12 @@ footer a:hover {
     padding-left: 1px;
 }
 
-#dropbut.active:hover {
-    color: #151515;
-    padding-left: 1px;
-}
-
 #innermenu {
     padding-top: 0px;
     margin: 0px;
-
-
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, margin-top 0.5s;
 }
 
 #innermenu nav {
@@ -467,6 +434,7 @@ footer a:hover {
     margin: 0px;
     padding-left: 15px;
     border: none;
+    padding-bottom: 10px;
 }
 
 #innermenu a:hover {
@@ -481,14 +449,6 @@ footer a:hover {
     transition-duration: 0.2s;
 }
 
-#innermenu nav {
-    padding-bottom: 10px;
-}
-
-#temp {
-    padding-bottom: 0;
-}
-
 
 #innermenu nav a {
     font-family: 'Spartan', sans-serif;
@@ -499,41 +459,42 @@ footer a:hover {
     transition-duration: 0.2s;
 }
 
-#innermenu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, margin-top 0.5s;
-}
-
 #innermenu.active {
     max-height: 130px;
 
 }
 
+#temp {
+    padding-bottom: 0px;
+}
+
 @keyframes wiggle {
- 50%{
-    transform: translate3d(0px, 0, 0);
-  }
+    50% {
+        transform: translate3d(0px, 0, 0);
+    }
 
-  53%,55% {
-    transform: translate3d(1px, 0, 0);
-  }
+    53%,
+    55% {
+        transform: translate3d(1px, 0, 0);
+    }
 
-  52%, 54%, 56% {
-    transform: translate3d(-1px, 0, 0);
-  }
+    52%,
+    54%,
+    56% {
+        transform: translate3d(-1px, 0, 0);
+    }
 
- 58% {
-    transform: translate3d(0px, 0, 0);
-  }
+    58% {
+        transform: translate3d(0px, 0, 0);
+    }
 }
 
 #new {
-  animation: wiggle 8s infinite;
+    animation: wiggle 8s infinite;
 }
 
 #new:hover {
-  animation: none;
+    animation: none;
 }
 
 
@@ -550,12 +511,22 @@ footer a:hover {
     #homeani {
         animation: none;
         transform: translate(0%, 0%);
+        padding-left: 0px;
+        margin-left: 0px;
+        padding-bottom: 10px;
+        padding-top: 8px;
+        width: 100%;
+        transition-duration: 0.1s;
     }
-    
+
     #homeanibtm {
         animation: none;
         transform: translate(0%, 0%);
+        padding-bottom: 27px;
+        padding-top: 0px;
+        margin-top: 0px
     }
+
     h1 {
         font-size: 2.2em;
         background-color: #fafafa;
@@ -563,16 +534,43 @@ footer a:hover {
         margin: 0;
         padding-bottom: 20px;
         padding-top: 20px;
+        font-size: 2.5em;
+        background-color: #f0f0f0;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 28px;
+        padding-top: 10px;
+        position: sticky;
     }
 
     h2 {
-        padding-top: 20px
+        padding-top: 20px;
+        font-size: 1.9em;
+        width: 90%;
     }
+
+    h3 {
+        font-size: 1.3em;
+        line-height: 1;
+    }
+
+    h4 {
+        font-size: 0.9em;
+    }
+
 
     #menu {
         margin: 0;
         padding: 0;
         text-align: center;
+        float: none;
+        height: 10px;
+        width: 100%;
+        padding-bottom: 165px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: relative;
         float: none;
         height: 10px;
         width: 100%;
@@ -585,10 +583,21 @@ footer a:hover {
         margin: auto;
         margin-top: 250px;
         padding: 0;
+        float: none;
+        width: 90%;
+        margin: auto;
+        margin-top: 300px;
+        padding: 0;
+    }
+
+    #bio {
+        min-width: 370px;
     }
 
     #bio p {
         font-size: 0.9em;
+        font-size: 1em;
+        line-height: 1.7
     }
 
     nav {
@@ -610,16 +619,33 @@ footer a:hover {
         min-width: 480px;
         margin: 0;
         padding: 0;
+        min-width: 150px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 360px;
+        min-height: 100vh;
     }
+
+    #column p {
+        font-size: 0.9em;
+    }
+
 
     nav li {
         padding-bottom: 20px;
         display: inline;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 30px;
+        display: block;
+        padding-bottom: 0;
+        padding-top: 20px
     }
 
     nav ul {
+        padding-top: 0px;
+        border-top: none;
         padding-top: 0px;
         border-top: none;
     }
@@ -629,158 +655,6 @@ footer a:hover {
         transition-duration: 0.1s;
         padding: 0;
         margin: 0;
-    }
-
-    #innermenu nav a {
-        font-size: 1em;
-    }
-
-    #innermenu nav {
-        padding-left: 0;
-        padding-top: 10px
-    }
-
-    #innermenu nav li {
-        display: block;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #innermenu nav li:last-child {
-        padding-bottom: 5px;
-    }
-
-    section nav {
-        padding-top: 30px;
-    }
-
-    section nav li {
-        display: block;
-        padding-bottom: 30px;
-    }
-
-    section nav a {
-        font-size: 1.2em;
-        transition-duration: 0.1s;
-        padding: 0;
-        margin: 0;
-    }
-
-    section h1 {
-        font-size: 21px;
-    }
-
-    #images {
-        float: none;
-        width: 70%;
-        margin: auto;
-        margin-top: 190px;
-        padding: 0;
-        margin-bottom: 80px;
-        min-width: 480px;
-    }
-
-    #images img {
-        max-height: 600px;
-        min-width: 481px;
-    }
-
-    footer {
-        padding: 0;
-        margin: 0;
-        position: fixed;
-        bottom: 0;
-        background-color: #fafafa;
-        font-size: 0.5em;
-        -webkit-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-    }
-
-    #rightfoot {
-        display: none;
-    }
-
-    #left-foot {
-        width: 100%;
-        min-width: 100px;
-        text-align: center;
-        float: none;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 1px;
-        margin-top: 1px;
-    }
-}
-
-
-@media screen and (max-width:770px){
-
-    
-    h1 {
-        font-size: 2.5em;
-        background-color: #f0f0f0;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 28px;
-        padding-top: 10px;
-        position: sticky;
-    }
-    
-    #homeani {
-        padding-left: 0px;
-        margin-left: 0px;
-        padding-bottom: 10px;
-        padding-top: 8px;
-        width: 100%;
-        transition-duration: 0.1s;
-    }
-    
-    #homeanibtm {
-        padding-bottom: 27px;
-        padding-top: 0px;
-        margin-top: 0px
-    }
-
-    #wrap {
-        min-width: 150px;
-    }
-
-    #menu {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        position: relative;
-        float: none;
-        height: 10px;
-        width: 100%;
-        padding-bottom: 165px;
-    }
-
-    #submenu {
-        float: none;
-        width: 90%;
-        margin: auto;
-        margin-top: 300px;
-        padding: 0;
-    }
-
-    h2 {
-        font-size: 1.9em;
-        width: 90%;
-    }
-
-    h3 {
-        font-size: 1.3em;
-        line-height: 1;
-    }
-
-    #column p {
-        font-size: 0.9em;
-    }
-
-
-    nav {
         width: 100%;
         text-align: center;
         margin: 0;
@@ -788,39 +662,12 @@ footer a:hover {
         position: relative;
         background-color: #f0f0f0;
         padding-top: 10px;
-    }
-
-    #wrap {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        min-width: 360px;
-    }
-
-    nav li {
-        padding-bottom: 30px;
-        display: block;
-    }
-
-    nav ul {
-        padding-top: 0px;
-        border-top: none;
-
-    }
-
-    nav {
         font-size: 1.5em;
         transition-duration: 0.1s;
         padding: 0;
         margin: 0;
-
     }
 
-    #innermenu nav li:first-child {
-        padding-top: 0px;
-        margin-top: 0px;
-
-    }
 
     nav a {
         font-weight: 400;
@@ -830,9 +677,33 @@ footer a:hover {
         padding-left: 0px;
     }
 
-    nav li {
-        padding-bottom: 0;
-        padding-top: 20px
+
+    #innermenu nav a {
+        font-size: 1em;
+        font-size: 0.60em;
+        font-weight: 400;
+        color: #525252;
+    }
+
+    #innermenu nav {
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-top: 8px;
+        background-color: #ebebeb;
+
+    }
+
+    #innermenu a:hover {
+        padding-left: 0px;
+    }
+
+    #innermenu nav li {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 8px;
+        padding: 4px;
     }
 
     nav li:first-child {
@@ -843,40 +714,13 @@ footer a:hover {
         padding-bottom: 18px;
     }
 
-    section nav {
-        background-color: #fafafa;
-        width: 100%;
-        padding-bottom: 100px;
-        padding-top: 30px;
+    #innermenu nav li:last-child {
+        padding-bottom: 5px;
     }
 
-    section nav li {
-        padding-bottom: 20px;
-    }
-
-    section nav a {
-        font-size: 1.7em;
-        transition-duration: 0.1s;
-        padding: 0;
-        margin: 0;
-
-    }
-
-    #innermenu nav a {
-        font-size: 0.60em;
-        font-weight: 400;
-        color: #525252;
-    }
-
-    #innermenu nav li {
-        padding-bottom: 8px;
-        padding: 4px;
-    }
-
-    #innermenu nav {
-        padding-bottom: 10px;
-        padding-top: 8px;
-        background-color: #ebebeb;
+    #innermenu nav li:first-child {
+        padding-top: 0px;
+        margin-top: 0px;
 
     }
 
@@ -894,11 +738,15 @@ footer a:hover {
         padding-left: 0px;
     }
 
-    #innermenu a:hover {
-        padding-left: 0px;
-    }
 
     #images {
+        float: none;
+        width: 70%;
+        margin: auto;
+        margin-top: 190px;
+        padding: 0;
+        margin-bottom: 80px;
+        min-width: 480px;
         float: none;
         width: 95%;
         margin: auto;
@@ -906,18 +754,16 @@ footer a:hover {
         padding: 0;
         margin-bottom: 80px;
         min-width: 360px;
+        margin-top: 200px;
+        transition: margin-top 0.5s;
     }
 
     #images img {
+        max-height: 600px;
+        min-width: 481px;
         max-height: 900px;
         min-width: 250px;
         margin-top: 35px;
-    }
-
-
-    #images {
-        margin-top: 200px;
-        transition: margin-top 0.5s;
     }
 
     #images.active {
@@ -925,21 +771,16 @@ footer a:hover {
     }
 
 
-    #bio p {
-        font-size: 1em;
-        line-height: 1.7
-    }
-
-    #bio {
-        min-width: 370px;
-    }
-
-    h4 {
-        font-size: 0.9em;
-    }
-
     footer {
-        position: absolute;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        bottom: 0;
+        background-color: #fafafa;
+        font-size: 0.5em;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
         font-size: 0.6em;
         -webkit-text-size-adjust: 100%;
         -moz-text-size-adjust: 100%;
@@ -948,7 +789,19 @@ footer a:hover {
         padding-bottom: 5px;
     }
 
+    #rightfoot {
+        display: none;
+    }
+
     #left-foot {
+        width: 100%;
+        min-width: 100px;
+        text-align: center;
+        float: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1px;
+        margin-top: 1px;
         float: none;
         width: 60%;
         margin-bottom: 0.5px;
@@ -956,8 +809,8 @@ footer a:hover {
         margin: auto;
         background-color: #fafafa;
     }
-
 }
+
 
 @media screen and (max-width:580px) {
     #bio p {
