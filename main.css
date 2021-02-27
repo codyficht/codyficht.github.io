@@ -295,7 +295,7 @@ h4 {
     font-family: 'Spartan', sans-serif;
     font-weight: 200;
     line-height: 1.5;
-    color: #353535;
+    color: #303030;
     margin: 0;
     padding-top: 0;
     padding-bottom: 20px;
@@ -312,7 +312,7 @@ h4 {
 }
 
 #bio h4 {
-    color: #333333;
+    color: #303030;
     font-size: 1.1em;
 }
 
@@ -595,7 +595,6 @@ footer a:hover {
     }
 
     #bio p {
-        font-size: 0.9em;
         font-size: 1em;
         line-height: 1.7
     }
