@@ -168,7 +168,7 @@ section nav a:hover {
 
 h1 a {
     text-decoration: none;
-    color: #323232;
+    color: #282828;
     font-size: 1.1em;
     text-align: left;
     margin: 0;
@@ -183,7 +183,7 @@ h1 {
 }
 
 h2 {
-    color: #353535;
+    color: #323232;
     font-size: 1.7em;
     text-align: left;
     margin: 0;
@@ -240,9 +240,9 @@ h2 {
     font-family: 'Spartan', sans-serif;
     font-weight: 200;
     line-height: 1.5;
-    color: #353535;
+    color: #252525;
     padding-bottom: 18px;
-    border-bottom: 1px solid #252525;
+    border-bottom: 2px solid #353535;
 }
 
 #column p:last-child {
@@ -279,7 +279,7 @@ h4 {
     font-family: 'Spartan', sans-serif;
     font-weight: 200;
     line-height: 1.5;
-    color: #303030;
+    color: #252525;
     margin: 0;
     padding-top: 0;
     padding-bottom: 20px;
@@ -295,7 +295,7 @@ h4 {
 }
 
 #bio h4 {
-    color: #303030;
+    color: #202020;
     font-size: 1.1em;
 }
 
