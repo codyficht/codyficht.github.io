@@ -2,187 +2,149 @@
 <html>
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-T53KKNL53F');
-
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <title>Recent Work</title>
-
-    <meta name="description" content="View the most recent works created by visual artist Evelyn Sorochan-Ruland.">
-
-    <link href="main.css" rel="stylesheet">
-
-    <!-- ****** faviconit.com favicons ****** -->
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
-    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-    <link rel="apple-touch-icon" href="/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="/favicon-144.png">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    <!-- ****** faviconit.com favicons ****** -->
-    <!--[if lt IE 9]>
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-T53KKNL53F');
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+	<title>Recent Work</title>
+	<meta name="description" content="View the most recent works created by visual artist Evelyn Sorochan-Ruland.">
+	<link href="main.css" rel="stylesheet">
+	<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+	<link rel="apple-touch-icon" href="/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/favicon-144.png">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+	<!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-
-    <script language="JavaScript" type="text/JavaScript">
-
-
-        function setupstor()
-    {
-        var x = document.getElementById("innermenu");
-        var s = "false";
-        try{
-            s = sessionStorage.getItem("down");
-        }
-        catch(err)
-            {
-                //Not there
-            }
-        
-        if(s === "true")
-            {
+	<script language="JavaScript" type="text/JavaScript">
+    
+        function setupstor() {
+            var x = document.getElementById("innermenu");
+            var s = "false";
+            try {
+                s = sessionStorage.getItem("down");
+            } catch (err) {}
+            if (s === "true") {
                 x.className = "active";
-            }
-        else
-            {
+            } else {
                 setTimeout(dropdown, 100);
             }
-        window.sessionStorage.setItem("down", true);
-    }
-     
-    function dropdown() {
-        var x = document.getElementById("innermenu");
-        var y = document.getElementById("dropbut");
-        var z = document.getElementById("images");
-        if (x.className === "")
-            {
+            window.sessionStorage.setItem("down", true);
+        }
+
+        function dropdown() {
+            var x = document.getElementById("innermenu");
+            var y = document.getElementById("dropbut");
+            var z = document.getElementById("images");
+            if (x.className === "") {
                 x.className = "active";
                 z.className = "active";
                 y.style = "color:#171717";
                 y.innerHTML = "Works −";
                 sessionStorage.setItem("down", true);
-            }
-        else
-            {
+            } else {
                 x.className = "";
                 z.className = "";
                 y.style = "color: #171717";
                 y.innerHTML = "Works +";
                 sessionStorage.setItem("down", false);
             }
-    }
-        
-</script>
+        }
+    
+    </script>
 </head>
-
 <div id="wrap">
 
-    <body>
-        <div id="menu">
-
-            <header>
-                <h1><a href="index.html">Evelyn<br>Sorochan-Ruland</a></h1>
-            </header>
-
-            <nav>
-                <ul>
-                    <li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#171717>Works −</a></li>
-                    <li id="temp">
-                        <div id="innermenu">
-                            <nav>
-                                <ul>
-                                    <li><a style="color:#171717;" href="recent.html#top">Recent</a></li>
-                                    <li><a href="installations.html#top">Installations</a></li>
-                                    <li><a href="studies.html#top">Studies</a></li>
-                                    <li><a href="abstractreliefs.html#top">Abstract Reliefs</a></li>
-                                    <li><a href="paintings.html#top">Paintings</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <script language="JavaScript" type="text/JavaScript">setupstor();</script>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
-                </ul>
-            </nav>
-
-
-        </div>
-        <div id="top"></div>
-        <main>
-            <div id="images" class="active">
-                <h2>Works: Recent</h2>
-                <div id="column">
-                    <img src="images/OAC/01ESRObstructedViews.jpg">
-                    <h3>Obstructed Views</h3>
-                    <p>Mixed media, dimensions may vary, 2020. </p>
-                    <img src="images/OAC/02ESRUphold.jpg">
-                    <h3>Uphold</h3>
-                    <p>Mixed media, dimensions may vary, 2020.</p>
-                    <img src="images/OAC/03ESRUpholddetail.jpg">
-                    <h3>Uphold (detail)</h3>
-                    <p>Mixed media, dimensions may vary, 2020. </p>
-                    <img src="images/OAC/04ESRPushback.jpg">
-                    <h3>Pushback</h3>
-                    <p>Mixed media, dimensions may vary, 2020. </p>
-                    <img src="images/OAC/05ESROffset.jpg">
-                    <h3>Offset</h3>
-                    <p>Mixed media, dimensions may vary, 2020.</p>
-                    <img src="images/OAC/06ESRTraced.jpg">
-                    <h3>Traced</h3>
-                    <p>Mixed media, dimensions may vary, 2020.</p>
-                    <img src="images/OAC/07ESRBroken.jpg">
-                    <h3>Traced, Bent, Broken</h3>
-                    <p>Left: Mixed media, dimensions may vary, 2020.<br>
-                    Centre: Mixed media, 23” x 36”, 2021.<br>
-                    Right: Mixed media, dimensions may vary, 2021.</p>
-                    <img src="images/OAC/08ESRBent.jpg">
-                    <h3>Bent, Broken</h3>
-                    <p>Left: Mixed media, 23” x 36”, 2021.<br>
-                        Right: Mixed media, dimensions may vary, 2021.</p>
-                    <img src="images/OAC/OAC_REVISED_NEWCOLOURS_250x64_RGB.png">
-                    
-                    <p><br>I would like to acknowledge the funding support<br> that I have received from the OAC for this work.</p>
-                </div>
-
-            </div>
-        </main>
-
-        <footer>
-            <p id="left-foot">
-                &copy; Evelyn Sorochan-Ruland - Copyright 2021<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a>
-            </p>
-
-        </footer>
-
-    </body>
+	<body>
+		<div id="menu">
+			<header>
+				<h1><a href="index.html">Evelyn<br>Sorochan-Ruland</a></h1> </header>
+			<nav>
+				<ul>
+					<li><a href="#/" id="dropbut" onclick="dropdown()" style=color:#171717>Works −</a></li>
+					<li id="temp">
+						<div id="innermenu">
+							<nav>
+								<ul>
+									<li><a style="color:#171717;" href="recent.html#top">Recent</a></li>
+									<li><a href="installations.html#top">Installations</a></li>
+									<li><a href="studies.html#top">Studies</a></li>
+									<li><a href="abstractreliefs.html#top">Abstract Reliefs</a></li>
+									<li><a href="paintings.html#top">Paintings</a></li>
+								</ul>
+							</nav>
+						</div>
+						<script language="JavaScript" type="text/JavaScript">setupstor();</script>
+					</li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="cv.html">CV</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="top"></div>
+		<main>
+			<div id="images" class="active">
+				<h2>Works: Recent</h2>
+				<div id="column"> <img src="images/OAC/01ESRObstructedViews.jpg">
+					<h3>Obstructed Views</h3>
+					<p>Mixed media, dimensions may vary, 2020. </p> <img src="images/OAC/02ESRUphold.jpg">
+					<h3>Uphold</h3>
+					<p>Mixed media, dimensions may vary, 2020.</p> <img src="images/OAC/03ESRUpholddetail.jpg">
+					<h3>Uphold (detail)</h3>
+					<p>Mixed media, dimensions may vary, 2020. </p> <img src="images/OAC/04ESRPushback.jpg">
+					<h3>Pushback</h3>
+					<p>Mixed media, dimensions may vary, 2020. </p> <img src="images/OAC/05ESROffset.jpg">
+					<h3>Offset</h3>
+					<p>Mixed media, dimensions may vary, 2020.</p> <img src="images/OAC/06ESRTraced.jpg">
+					<h3>Traced</h3>
+					<p>Mixed media, dimensions may vary, 2020.</p> <img src="images/OAC/07ESRBroken.jpg">
+					<h3>Traced, Bent, Broken</h3>
+					<p>Left: Mixed media, dimensions may vary, 2020.
+						<br> Centre: Mixed media, 23” x 36”, 2021.
+						<br> Right: Mixed media, dimensions may vary, 2021.</p> <img src="images/OAC/08ESRBent.jpg">
+					<h3>Bent, Broken</h3>
+					<p>Left: Mixed media, 23” x 36”, 2021.
+						<br> Right: Mixed media, dimensions may vary, 2021.</p> <img src="images/OAC/OAC_REVISED_NEWCOLOURS_250x64_RGB.png">
+					<p>
+						<br>I would like to acknowledge the funding support
+						<br> that I have received from the OAC for this work.</p>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p id="left-foot"> &copy; Evelyn Sorochan-Ruland - Copyright 2021
+				<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> </p>
+		</footer>
+	</body>
 </div>
 
 </html>

@@ -51,19 +51,16 @@
     <script language="JavaScript" type="text/JavaScript">
 
         function dropdown() {
-        var x = document.getElementById("innermenu");
-        var y = document.getElementById("dropbut");
-        var z = document.getElementById("images");
-        if (x.className === "")
-            {
+            var x = document.getElementById("innermenu");
+            var y = document.getElementById("dropbut");
+            var z = document.getElementById("images");
+            if (x.className === "") {
                 x.className = "active";
                 z.className = "active";
                 y.style = "color:#171717";
                 y.innerHTML = "Works −";
                 sessionStorage.setItem("down", true);
-            }
-        else
-            {
+            } else {
                 x.className = "";
                 z.className = "";
                 y.style = "color: #555555";
@@ -71,61 +68,48 @@
                 sessionStorage.setItem("down", false);
             }
         }
-    
+
         var x;
+
         function dropfunc() {
-            
-            x  = setTimeout(dropdown, 9000);
+
+            x = setTimeout(dropdown, 9000);
         }
-        
-        function cleartime()
-        {
-            try
-            {
+
+        function cleartime() {
+            try {
                 clearTimeout(x);
-            }
-            catch
-            {
-                //no timer set yet
+            } catch {
+
             }
         }
-                
-        function resettime()
-        {
+
+        function resettime() {
             var x = document.getElementById("innermenu");
-            if(x.className == "active")
-            {
-                //do nothing
-             }
-            else
-            {
+            if (x.className == "active") {
+
+            } else {
                 cleartime(x);
             }
         }
-        
-    function setup() {
-        var x = document.getElementById("innermenu");
-        var test = "false";
-        try
-        {
-            test = sessionStorage.getItem("down");
-        }
-        catch(err)
-        {
-             //not defined yet   
-        }
-        if(test === "true")
-        {
-            x.className = "active";
-            setTimeout(dropdown, 300);
-            sessionStorage.setItem("down", false);
-        }
-        else
-            {
+
+        function setup() {
+            var x = document.getElementById("innermenu");
+            var test = "false";
+            try {
+                test = sessionStorage.getItem("down");
+            } catch (err) {
+
+            }
+            if (test === "true") {
+                x.className = "active";
+                setTimeout(dropdown, 300);
+                sessionStorage.setItem("down", false);
+            } else {
                 x.className = "";
                 sessionStorage.setItem("down", false);
             }
-    }
+        }
         
 </script>
 
@@ -203,20 +187,16 @@
                 <h4>PUBLICATIONS & BIBLIOGRAPHY</h4>
                 <p><br>2018   Beyond the Jargon Interview, S6 E3, facilitated by Maureen Chow. Online. <br>             October, 22: <a href="#http://cfuvpodcasts.com/beyond-the-jargon/" target="_blank">Link</a> <br>2018   “MFA Connect: Ex Libris Gallery,” Inspired By Great Exhibition of the North <br>             Events. Online. June, 18: <a href="https://getnorth2018.com/previous-events/mfa-connect/" target="_blank">Link</a> <br>2018   Quigley, Megan. “Rootstock, and Seed”, in toto exhibition <br>             catalogue. Print. May, 2018.<br>2018   "Two MFA exhibits: one downtown, one crossing borders," University of <br>              Victoria Fine Arts Blog, by John Threlfall. Online. May, 4: <a href="https://finearts.uvic.ca/research/blog/2018/05/04/downtown-mfa-exhibit-on-now/" target="_blank">Link</a><br>2017   “Visual Arts MFAs Connect across institutions,” University of Victoria Fine <br>             Arts Blog, by John Threlfall. Online. November, 3: <a href="https://finearts.uvic.ca/research/blog/2017/11/03/visual-arts-mfas-connect-across-institutions/" target="_blank">Link</a> <br>2015   “LAC gallery showcases upcoming trendsetters in art.” The News <br>             Mississauga, Jason Spencer. Online. July, 15: <a href="https://www.mississauga.com/whatson-story/5735733-lac-gallery-showcases-upcoming-trendsetters-in-art/" target="_blank">Link</a> <br>2015   “This Event is For the Birds.” Guelph Mercury, Online. September, 18: <a href="https://www.guelphmercury.com/community-story/5919063-this-event-is-for-the-birds/" target="_blank">Link</a> <br>2014   “Red.” ArtAscent, Vol 10: 37. Print/Web. December: <a href="https://artascent.com/evelyn-sorochan-ruland/" target="_blank">Link</a> </p>
             
-            
-            
             </div>
-            
         </div>
-        
     </main>
    
-    <footer>
-        <p id="left-foot">
-            &copy; Evelyn Sorochan-Ruland - Copyright 2021<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> 
-        </p>
-    </footer>
+        <footer>
+            <p id="left-foot">
+                &copy; Evelyn Sorochan-Ruland - Copyright 2021<br>Web Design and Development by <a href="mailto:cody.ficht@icloud.com">Cody Ficht</a> 
+            </p>
+        </footer>
               
-</body>
+    </body>
 </div>
 </html>
