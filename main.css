@@ -209,6 +209,7 @@ h2 {
     max-height: 750px;
     margin-top: 40px;
     border-radius: 3px;
+    object-fit: contain;
 }
 
 #images img:first-child {
