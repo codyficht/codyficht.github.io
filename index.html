@@ -60,13 +60,13 @@
                 x.className = "active";
                 z.className = "active";
                 y.style = "color:#171717";
-                y.innerHTML = "Works −";
+                y.innerHTML = "Artwork −";
                 sessionStorage.setItem("down", true);
             } else {
                 x.className = "";
                 z.className = "";
                 y.style = "color: #555555";
-                y.innerHTML = "Works +";
+                y.innerHTML = "Artwork +";
                 sessionStorage.setItem("down", false);
             }
         }
@@ -127,7 +127,6 @@
             linkArr[6] = "abstractreliefs.html#top";
             linkArr[7] = "studies.html#top";
             document.getElementById("links").src = imgArr[num];
-            document.getElementById("homeSlideShow").href = "works.html";
             
             
             var dots = document.getElementsByClassName("dot");
@@ -161,7 +160,7 @@
 				<h1 id="homeanibtm"><a href="index.html">Sorochan-Ruland</a></h1> </header>
 			<nav>
 				<ul>
-					<li id="droptitle"> <a href="#/" id="dropbut" onclick="dropdown(); cleartime(); dropfunc(); resettime();">Works +</a> </li>
+					<li id="droptitle"> <a href="#/" id="dropbut" onclick="dropdown(); cleartime(); dropfunc(); resettime();">Artwork +</a> </li>
 					<li id="temp">
 						<div id="innermenu">
 							<nav>
