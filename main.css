@@ -31,6 +31,7 @@ header {
     animation-fill-mode: forwards;
     bottom: 0;
     transform: translate(0, -110%);
+    padding-top: 36px;
     height: 36px;
     margin-bottom: 0;
 }
@@ -46,7 +47,7 @@ header {
     animation: showNameBtm 1s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
-    transform: translate(0, -170%);
+    transform: translate(0, -270%);
 }
 
 .titleani {
@@ -159,7 +160,6 @@ section nav a:hover {
     width: 288px;
     height: 100%;
     padding-left: 20px;
-    padding-top: 35px;
 }
 
 #submenu {
@@ -183,7 +183,7 @@ h1 a {
 
 h1 {
     margin-bottom: 10px;
-    margin-top: 2px
+    margin-top: 38px
 }
 
 h2 {
@@ -487,7 +487,7 @@ footer a:hover {
 
 @keyframes showNameBtm {
     0% {
-        transform: translate3d(0, -170%, 0);
+        transform: translate3d(0, -270%, 0);
     }
     100% {
         transform: translate3d(0, 0, 0);
