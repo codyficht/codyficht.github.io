@@ -51,7 +51,7 @@ header {
 
 .titleani {
     animation: showTitle 1s;
-    animation-delay: 0.7s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
     bottom: 0;
     transform: translate(0, -350%);
