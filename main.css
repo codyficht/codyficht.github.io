@@ -273,9 +273,26 @@ h4 {
     text-shadow: 0 0 0;
 }
 
+table {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    color: #222222;
+    font-size: 0.9em;
+}
+td {
+    vertical-align: top;
+    text-align: left;
+    padding: 1px;
+    padding-right: 10px;;
+}
+
 #bio {
     max-width: 800px;
-    min-width: 550px;
+    min-width: 420px;
 }
 
 #bio p {
@@ -301,6 +318,7 @@ h4 {
 #bio h4 {
     color: #202020;
     font-size: 1.1em;
+    padding: 5px;
 }
 
 #images h2 {
@@ -513,6 +531,9 @@ footer a:hover {
     #bio p {
         font-size: 0.8em;
     }
+    table {
+        font-size: 0.8em;
+    }
 }
 
 @media screen and (max-width:770px) {
@@ -597,6 +618,10 @@ footer a:hover {
         min-width: 370px;
     }
     #bio p {
+        font-size: 0.9em;
+        line-height: 1.7;
+    }
+    table {
         font-size: 0.9em;
         line-height: 1.7;
     }
@@ -779,8 +804,13 @@ footer a:hover {
 
 @media screen and (max-width:580px) {
     #bio p {
-        font-size: 0.65em;
+        font-size: 0.75em;
         line-height: 1.7;
         color: #131313;
+    }
+    table {
+        line-height: 1.7;
+        color: #131313;
+        font-size: 0.75em;
     }
 }
