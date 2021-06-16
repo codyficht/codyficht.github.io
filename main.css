@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500&display=swap');
-
 header,
 nav,
 section,
@@ -10,6 +9,7 @@ main {
 
 html {
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 header {
@@ -49,6 +49,16 @@ header {
     transform: translate(0, -170%);
 }
 
+.titleani {
+    animation: showTitle 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, -350%);
+    height: 36px;
+    margin-bottom: 0;
+}
+
 body {
     margin: 0;
     background: #fafafa;
@@ -70,8 +80,6 @@ body {
     max-width: 1300px;
     min-width: 768px;
     min-height: 100vh;
-    overflow: auto;
-    position: relative;
 }
 
 nav {
@@ -458,18 +466,15 @@ footer a:hover {
     50% {
         transform: translate3d(0px, 0, 0);
     }
-
     53%,
     55% {
         transform: translate3d(1px, 0, 0);
     }
-
     52%,
     54%,
     56% {
         transform: translate3d(-1px, 0, 0);
     }
-
     58% {
         transform: translate3d(0px, 0, 0);
     }
@@ -479,7 +484,6 @@ footer a:hover {
     0% {
         transform: translate3d(0, -110%, 0);
     }
-
     100% {
         transform: translate3d(0, 0, 0);
     }
@@ -489,7 +493,15 @@ footer a:hover {
     0% {
         transform: translate3d(0, -170%, 0);
     }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
 
+@keyframes showTitle {
+    0% {
+        transform: translate3d(0, -350%, 0);
+    }
     100% {
         transform: translate3d(0, 0, 0);
     }
@@ -508,6 +520,10 @@ footer a:hover {
 }
 
 @media screen and (max-width:770px) {
+    .titleani {
+        animation: none;
+        transform: translate(0%, 0%);
+    }
     #homeani {
         animation: none;
         transform: translate(0%, 0%);
@@ -518,7 +534,6 @@ footer a:hover {
         width: 100%;
         transition-duration: 0.1s;
     }
-
     #homeanibtm {
         animation: none;
         transform: translate(0%, 0%);
@@ -526,7 +541,6 @@ footer a:hover {
         padding-top: 0px;
         margin-top: 0px
     }
-
     h1 {
         font-size: 2.2em;
         background-color: #fafafa;
@@ -542,22 +556,18 @@ footer a:hover {
         padding-top: 10px;
         position: sticky;
     }
-
     h2 {
         padding-top: 20px;
         font-size: 1.9em;
         width: 90%;
     }
-
     h3 {
         font-size: 1.3em;
         line-height: 1;
     }
-
     h4 {
         font-size: 0.9em;
     }
-
     #menu {
         margin: 0;
         padding: 0;
@@ -575,7 +585,6 @@ footer a:hover {
         width: 100%;
         padding-bottom: 165px;
     }
-
     #submenu {
         float: none;
         width: 70%;
@@ -588,16 +597,13 @@ footer a:hover {
         margin-top: 300px;
         padding: 0;
     }
-
     #bio {
         min-width: 370px;
     }
-
     #bio p {
         font-size: 0.9em;
         line-height: 1.7;
     }
-
     nav {
         width: 100%;
         text-align: center;
@@ -606,11 +612,9 @@ footer a:hover {
         padding: 0;
         background-color: #fafafa;
     }
-
     #temp {
         padding: 0;
     }
-
     #wrap {
         width: 100%;
         min-width: 480px;
@@ -623,11 +627,9 @@ footer a:hover {
         min-width: 360px;
         min-height: 100vh;
     }
-
     #column p {
         font-size: 0.9em;
     }
-
     nav li {
         padding-bottom: 20px;
         display: inline;
@@ -638,14 +640,12 @@ footer a:hover {
         padding-bottom: 0;
         padding-top: 20px
     }
-
     nav ul {
         padding-top: 0px;
         border-top: none;
         padding-top: 0px;
         border-top: none;
     }
-
     nav {
         font-size: 1.1em;
         transition-duration: 0.1s;
@@ -663,22 +663,18 @@ footer a:hover {
         padding: 0;
         margin: 0;
     }
-
     nav a {
         font-weight: 400;
     }
-
     nav a:hover {
         padding-left: 0px;
     }
-
     #innermenu nav a {
         font-size: 1em;
         font-size: 0.60em;
         font-weight: 400;
         color: #525252;
     }
-
     #innermenu nav {
         padding-left: 0;
         padding-top: 10px;
@@ -686,11 +682,9 @@ footer a:hover {
         padding-top: 8px;
         background-color: #ebebeb;
     }
-
     #innermenu a:hover {
         padding-left: 0px;
     }
-
     #innermenu nav li {
         display: block;
         padding-left: 0;
@@ -698,37 +692,29 @@ footer a:hover {
         padding-bottom: 8px;
         padding: 4px;
     }
-
     nav li:first-child {
         padding-top: 0px;
     }
-
     nav li:last-child {
         padding-bottom: 18px;
     }
-
     #innermenu nav li:last-child {
         padding-bottom: 5px;
     }
-
     #innermenu nav li:first-child {
         padding-top: 0px;
         margin-top: 0px;
     }
-
     #innermenu.active {
         max-height: 280px;
         margin-top: 5px
     }
-
     #dropbut {
         font-weight: 400;
     }
-
     #dropbut:hover {
         padding-left: 0px;
     }
-
     #images {
         float: none;
         width: 70%;
@@ -747,7 +733,6 @@ footer a:hover {
         margin-top: 200px;
         transition: margin-top 0.5s;
     }
-
     #images img {
         max-height: 600px;
         min-width: 481px;
@@ -755,11 +740,9 @@ footer a:hover {
         min-width: 250px;
         margin-top: 35px;
     }
-
     #images.active {
         margin-top: 460px;
     }
-
     footer {
         padding: 0;
         margin: 0;
@@ -777,11 +760,9 @@ footer a:hover {
         font-size: 0.7em;
         padding-bottom: 5px;
     }
-
     #rightfoot {
         display: none;
     }
-
     #left-foot {
         width: 100%;
         min-width: 100px;
