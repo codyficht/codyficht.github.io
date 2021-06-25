@@ -2,21 +2,10 @@
 <html>
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T53KKNL53F"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-T53KKNL53F');
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <title>The Artist | Evelyn Sorochan-Ruland</title>
-    <meta name="description" content="Learn more about visual artist Evelyn Sorochan-Ruland.">
+    <title>Contact | Evelyn Sorochan-Ruland</title>
+    <meta name="description" content="Contact information for Evelyn Sorochan-Ruland.">
     <link href="main.css" rel="stylesheet">
     <!-- ****** faviconit.com favicons ****** -->
     <link rel="shortcut icon" href="/favicon.ico">
@@ -46,8 +35,8 @@
     <script language="JavaScript" type="text/JavaScript">
 
         function dropdown() { var x = document.getElementById("innermenu"); var y = document.getElementById("dropbut"); var z = document.getElementById("images"); if (x.className === "") { x.className = "active"; z.className = "active"; y.style = "color:#171717";
-        y.innerHTML = "Artwork −"; sessionStorage.setItem("down", true); } else { x.className = ""; z.className = ""; y.style = "color: #555555"; y.innerHTML = "Artwork +"; sessionStorage.setItem("down", false); } } var x; function dropfunc() { x = setTimeout(dropdown,
-        9000); } function cleartime() { try { clearTimeout(x); } catch {} } function resettime() { var x = document.getElementById("innermenu"); if (x.className == "active") {} else { cleartime(x); } } function setup() { var x = document.getElementById("innermenu");
+        y.innerHTML = "Artwork −"; sessionStorage.setItem("down", true); } else { x.className = ""; z.className = ""; y.style = "color: #555555"; y.innerHTML = "Artwork +"; sessionStorage.setItem("down", false); } } function resettime() { var x = document.getElementById("innermenu");
+        if (x.className == "active") {} else { cleartime(x); } } var x; function dropfunc() { x = setTimeout(dropdown, 9000); } function cleartime() { try { clearTimeout(x); } catch {} } function setup() { var x = document.getElementById("innermenu");
         var test = "false"; try { test = sessionStorage.getItem("down"); } catch (err) {} if (test === "true") { x.className = "active"; setTimeout(dropdown, 300); sessionStorage.setItem("down", false); } else { x.className = ""; sessionStorage.setItem("down",
         false); } }
 
@@ -77,28 +66,33 @@
                         </div>
                         <script language="JavaScript" type="text/JavaScript"> setup(); </script>
                     </li>
-                    <li><a href="about.html" style=color:#171717>About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="cv.html">CV</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="https://www.instagram.com/evierenae/?hl=en" target="_blank">Instagram</a></li>
-                    <li class="vr"><a href="virtual_reality.html">Virtual Exhibition</a></li>
+                    <li class="vr"><a href="virtual_reality.html" style=color:#171717>Virtual Exhibition</a></li>
                 </ul>
             </nav>
         </div>
         <div id="top"></div>
         <main>
             <div id="images">
-                <h2 class="titleani">About</h2>
-                <div id="column"> <img src="images/portrait/IMG_0545.jpg" alt="Artist Evelyn Sorochan-Ruland">
-                    <h3>Biography</h3>
-                    <p>Based in Ontario, visual artist Evelyn Sorochan-Ruland’s recent interdisciplinary work is influenced by her surroundings and familiar objects. The artwork resides in the aesthetic space of the in-between, most certainly hovering amidst
-                        painting and sculpture. Instinctively feeling her way through material dissonance and order, the artwork reminds the viewer the ways in which they interpret the world through their own visceral and tactile experiences.
+                <h2 class="titleani">Virtual Reality Exhibition</h2>
+                <div id="column">
+                    <p>
+                        Built for Oculus virtual reality headsets. Please visit this site using your headset and Oculus Browser.<br>
+                        You may also join with Windows/Mac using Google Chrome or Firefox browsers.
                         <br>
-                        <br>She received both her BFA from the University of Guelph in (2014) and her MFA from the University of Victoria in (2018) with distinction. Sorochan-Ruland has been recognized for her work by receiving, The Oxford County Art
-                        Gallery Scholarship (2010), Audrey St. Denys & M. E. Johnson Scholarship (2017), and the Jessie Allan Forsyth Scholarship (2017). Sorochan-Ruland has also participated in residencies such as The Boarding House Arts Incubator Residency
-                        in Guelph Ontario, The Vermont Studio Centre, and was an instructor at the University of Victoria (2018). Her work has been exhibited across Canada and internationally, for instance at the FINA Gallery in Kelowna BC, Art Basil
-                        L.A, Ed Video (Booth) in Los Angeles, Ex Libris Gallery in Newcastle England, and The Living Arts Centre in Mississauga Ontario. In 2020 her work was unanimously selected to be acquired for the London Arts Council’s collection,
-                        she became a recipient of the OAC Emerging Visual Artists Creation Project Grant, and also received a Project Grant from the LAC.</p>
+                    </p>
+                    <!-- Copy and Paste Me -->
+                    <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+                        <iframe
+                            src="https://glitch.com/embed/#!/embed/evelyn-gallery?path=public/index.html&previewSize=100&attributionHidden=true"
+                            title="evelyn-gallery on Glitch"
+                            allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+                            style="height: 100%; width: 100%; border: 0;">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </main>
