@@ -16,6 +16,11 @@ header {
     overflow: hidden;
 }
 
+.vr {
+    display: none;
+    height: 10px;
+}
+
 #homeani {
     overflow: hidden;
     transform: translate(50%, 50%);
