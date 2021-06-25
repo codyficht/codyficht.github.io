@@ -537,6 +537,10 @@ footer a:hover {
 }
 
 @media screen and (max-width:770px) {
+    .vr {
+        display: none;
+        height: 10px;
+    }
     .titleani {
         animation: none;
         transform: translate(0%, 0%);
@@ -632,6 +636,7 @@ footer a:hover {
         margin: 0;
         padding: 0;
         background-color: #fafafa;
+        
     }
     #temp {
         padding: 0;
@@ -683,6 +688,7 @@ footer a:hover {
         transition-duration: 0.1s;
         padding: 0;
         margin: 0;
+        padding-bottom: 20px;
     }
     nav a {
         font-weight: 400;
