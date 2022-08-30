@@ -217,7 +217,7 @@ h2 {
     height: auto;
     max-height: 750px;
     margin-top: 40px;
-    border-radius: 0 0 0 6px;
+    border-radius: 4px 0 0 0;
     object-fit: contain;
     object-position: left bottom;
 }
