@@ -84,6 +84,23 @@ body {
     min-width: 768px;
 }
 
+#topButton {
+    position: fixed; 
+    bottom: 20px;
+    right: 4%; 
+    z-index: 99; 
+    border: none; 
+    outline: none;
+    background-color: #a5a5a5; 
+    color: white; 
+    cursor: pointer; 
+    padding: 12px 12px 10px 12px; 
+    border-radius: 6px; 
+    font-size: 12px; 
+    text-decoration: none;
+    opacity: 85%;
+  }
+
 nav {
     text-align: left;
     width: 290px;
@@ -531,6 +548,11 @@ footer a:hover {
     .vr {
         display: none;
         height: 10px;
+    }
+
+    #topButton {
+        font-size: 20px;
+        padding: 15px 15px 12px 15px;
     }
     .titleani {
         animation: none;
