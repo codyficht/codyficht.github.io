@@ -399,6 +399,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
+#left-foot-oac {
+    width: 250px;
+    left: 0;
+    margin-bottom: 5px;
+}
+
 #left-foot a:visited {
     color: #424242;
 }
@@ -414,7 +420,7 @@ footer a:hover {
 }
 
 #left-foot {
-    float: left;
+    left: 0;
     width: 60%;
     max-width: 300px;
     min-width: 320px;
@@ -789,7 +795,7 @@ footer a:hover {
         margin-top: 35px;
     }
     #images.active {
-        margin-top: 620px;
+        margin-top: 580px;
     }
     footer {
         padding: 0;
@@ -823,6 +829,20 @@ footer a:hover {
         margin: auto;
         background-color: #fafafa;
     }
+
+    #left-foot-image-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    #left-foot-oac {
+        left: auto;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+    }
+
+    
 }
 
 @media screen and (max-width:580px) {
