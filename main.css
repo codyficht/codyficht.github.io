@@ -113,6 +113,7 @@ nav {
     text-align: left;
     width: 290px;
     opacity: 100%;
+    z-index: 99;
 }
 
 nav ul {
@@ -234,7 +235,7 @@ h2 {
     padding-right: 10px;
     padding-bottom: 150px;
     min-height: 300px;
-    transition-duration: 0.3s;
+    transition-duration: 1s;
 }
 
 #images img {
@@ -250,10 +251,14 @@ h2 {
     border-top: none;
 }
 
+#dotContainer {
+    width: 100%;
+}
+
 .dot {
-    height: 6px;
-    width: 6px;
-    margin: 0 6px;
+    height: 7px;
+    width: 7px;
+    margin: 0 1.5%;
     margin-top: 5px;
     background-color: #e3e3e3;
     border-radius: 50%;
@@ -449,7 +454,7 @@ footer a:hover {
     margin: 0px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s, margin-top 0.5s;
+    transition: max-height 0.8s, margin-top 0.8s;
 }
 
 #innermenu nav {
@@ -557,6 +562,13 @@ footer a:hover {
     .vr {
         display: none;
         height: 10px;
+    }
+
+    .dot {
+        height: 9px;
+        width: 9px;
+        margin: 0 2%;
+        margin-top: 8px;
     }
 
     #topButton {
@@ -737,7 +749,7 @@ footer a:hover {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 8px;
-        padding: 02px;
+        padding: 1px;
     }
     nav li:first-child {
         padding-top: 0px;

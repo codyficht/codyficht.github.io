@@ -45,7 +45,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
         <script language="JavaScript" type="text/JavaScript">
-            function setupstor() { var x = document.getElementById("innermenu"); var s = "false"; try { s = sessionStorage.getItem("down"); } catch (err) {} if (s === "true") { x.className = "active"; } else { setTimeout(dropdown, 100); } window.sessionStorage.setItem("down",
+            function setupstor() { var x = document.getElementById("innermenu"); var s = "false"; try { s = sessionStorage.getItem("down"); } catch (err) {} if (s === "true") { x.className = "active"; } else { setTimeout(dropdown, 10); } window.sessionStorage.setItem("down",
             true); } function dropdown() { var x = document.getElementById("innermenu"); var y = document.getElementById("dropbut"); var z = document.getElementById("images"); if (x.className === "") { x.className = "active"; z.className = "active"; y.style
             = "color:#171717"; y.innerHTML = "Artwork −"; sessionStorage.setItem("down", true); } else { x.className = ""; z.className = ""; y.style = "color: #171717"; y.innerHTML = "Artwork +"; sessionStorage.setItem("down", false); } }
         </script>

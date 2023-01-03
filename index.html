@@ -54,6 +54,8 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	<script language="JavaScript" type="text/JavaScript"> 
+        var imageLoopInterval;
+
         function dropdown() {
             var x = document.getElementById("innermenu");
             var y = document.getElementById("dropbut");
@@ -99,7 +101,7 @@
             } catch {}
             if (test === "true") {
                 x.className = "active";
-                setTimeout(dropdown, 100);
+                setTimeout(dropdown, 10);
                 sessionStorage.setItem("down", false);
             } else {
                 x.className = "";
@@ -107,9 +109,10 @@
             }
         }
 
-        function imageRotate() {
-            var num = 0;
-            var dot_num = -1;
+        function imageRotate(index = 0) {
+            clearInterval(imageLoopInterval);
+            var num = index;
+            var dot_num = index - 1;
             var imgArr = new Array();
             var linkArr = new Array();
             imgArr[0] = 'images/Homepage/OffshootESR.jpg'
@@ -149,9 +152,9 @@
                 dots[dot_num].className += " current";
             }
             handler();
-            setInterval(function() {
+            imageLoopInterval = setInterval(function() {
                 handler();
-            }, 6000);
+            }, 5500);
         } 
         
     </script>
@@ -199,16 +202,16 @@
 					<a id="links" href=""> <img src="" alt="Artist Evelyn Sorochan-Ruland's Artwork" id="homeSlideShow" width="1200" height="798"/> </a>
 					<p></p>
 				</section>
-                <div style="text-align:center">
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
-                    <span class="dot"> </span> 
+                <div id="dotContianer" style="text-align:center">
+                    <a class="dot" href="javascript:imageRotate(0)"></a>
+                    <a class="dot" href="javascript:imageRotate(1)"></a>
+                    <a class="dot" href="javascript:imageRotate(2)"></a>
+                    <a class="dot" href="javascript:imageRotate(3)"></a>
+                    <a class="dot" href="javascript:imageRotate(4)"></a>
+                    <a class="dot" href="javascript:imageRotate(5)"></a>
+                    <a class="dot" href="javascript:imageRotate(6)"></a>
+                    <a class="dot" href="javascript:imageRotate(7)"></a>
+                    <a class="dot" href="javascript:imageRotate(8)"></a>
                 </div>
 			</div>
 		</main>
