@@ -20,6 +20,10 @@ header {
     height: 10px;
 }
 
+.cv-list {
+    margin-top: 5px;
+}
+
 #homeani {
     overflow: hidden;
     transform: translate(50%, 50%);
