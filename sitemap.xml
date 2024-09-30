@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.evelynsorochanruland.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.evelynsorochanruland.com/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- CV Page -->
+  <url>
+    <loc>https://www.evelynsorochanruland.com/cv.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.evelynsorochanruland.com/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Artwork Pages -->
+  <url>
+    <loc>https://www.evelynsorochanruland.com/foothold.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/groundwork.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/reclaim.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/industrial_skins.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/touchline.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/abstractreliefs.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/overtake.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/anthem.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.evelynsorochanruland.com/awkward_truce.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Instagram Link -->
+  <url>
+    <loc>https://www.instagram.com/evierenae/?hl=en</loc>
+    <priority>0.50</priority>
+  </url>
+  
+</urlset>
